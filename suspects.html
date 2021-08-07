@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<head>
+  <title>SUSPECTS | Finding the Robin Hood Hacker</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+    body, html {
+      background-color: black;
+      font-family: 'Roboto Mono', monospace;
+      color: white;
+      font-size: 20px;
+      line-height: 2;
+      width: 130%;
+      margin-left: -15%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth;
+    }
+    .container {
+      max-width: 1400px;
+      width: 80vw;
+      margin: 0 auto;
+      padding-top: 100px;
+
+    }
+    h5 {
+      font-size: 12px;
+      text-transform: uppercase;
+      padding: 0;
+      color: #4de639;
+      margin: 0px;
+      letter-spacing: 3px;
+      background: #171717;
+      margin-top: 10px;
+    }
+    .name {
+      margin-top: 0px;
+    }
+    .page-title {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    text-shadow: 0 0 15px #411;
+    color: #4de639;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    width: 90%!important;
+  }
+  .title {
+    padding-bottom: 10px;
+    padding-top: 60px;
+  }
+  .menu {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+  }
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .menu ul li {
+    width: 14.2%;
+  }
+  .menu-title {
+    padding: 10px;
+    background: #171717;
+    color: #4de639;
+    letter-spacing: 2px;
+  }
+  @media (max-width: 40em) {
+    .menu {
+      margin-top: -40px;
+    }
+    .menu ul li {
+      width: 100%;
+    }
+    .container {
+      width: 80vw;
+      margin: 0 auto;
+      padding-top: 100px;
+    }
+    .title {
+      width: 100%;
+    }
+    .menu-title {
+      text-align: center;
+      padding-bottom: 10px;
+      background: #000;
+    }
+    div.character-img, .character-info, .character-checkbox {
+      min-width: 100%;
+    }
+    }
+  }
+  .menu ul li > ul {
+    display: flex;
+    visibility: hidden;
+    position: absolute;
+    left: -99999;
+    flex-direction: column;
+  }
+  .menu ul li > ul li {
+    width: 100%;
+  }
+  .menu ul li:hover a {
+    background: #2e2e2e;
+    color: #fff;
+  }
+  .menu ul li:hover a:hover {
+    color: #fff;
+  }
+  .menu ul li:hover > ul {
+    visibility: visible;
+    position: relative;
+    left: 0;
+  }
+  .menu a {
+    display: block;
+    background: #171717;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+  .menu a:hover {
+    background: #2e2e2e;
+    color: blue;
+  }
+  .menu .sub-menu li > a {
+    background: #2e2e2e;
+    color: #fff;
+  }
+  .menu .sub-menu > a:after {
+    content: "+";
+    padding-left: 5px;
+  }
+
+  .character-container {
+    padding-top: 100px;
+    width: 100%!important;
+    min-height: 400px;
+
+  }
+
+  div.character-img {
+    width: 20%; float: left;
+  }
+  .character-img img {
+    width: 100%;
+        height:inherit;
+  }
+  .character-info {
+    width: 57%; padding-left: 3%; float: left;
+  }
+  .character-checkbox {
+    float: left; width: 13%; padding-left: 3%;
+    height: 100%!important;
+
+  }
+  .checkbox-label {
+      display: block;
+      position: absolute;
+      margin: auto;
+      cursor: pointer;
+      font-size: 22px;
+      line-height: 24px;
+      height: 24px;
+      width: 24px;
+      clear: both;
+      min-width: 200px;
+  }
+  .checkbox-label::after {
+      content: '\2003\2003\2003\2003\2003Interviewed';
+      font-size: 13px;
+        font-family: 'Roboto Mono', monospace;
+        text-transform: uppercase;
+  }
+  .checkbox-label input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+  }
+  .checkbox-label .checkbox-custom {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 24px;
+      width: 24px;
+      background-color: transparent;
+      border-radius: 0px;
+    	transition: all 0.3s ease-out;
+    	-webkit-transition: all 0.3s ease-out;
+    	-moz-transition: all 0.3s ease-out;
+    	-ms-transition: all 0.3s ease-out;
+    	-o-transition: all 0.3s ease-out;
+      border: 2px solid #FFFFFF;
+  }
+  .checkbox-label input:checked ~ .checkbox-custom {
+      background-color: #4de639;
+      border-radius: 0px;
+      -webkit-transform: rotate(0deg) scale(1);
+      -ms-transform: rotate(0deg) scale(1);
+      transform: rotate(0deg) scale(1);
+      opacity:1;
+      border: 2px solid #2e2e2e;
+  }
+  .checkbox-label .checkbox-custom::after {
+      position: absolute;
+      content: "";
+      left: 12px;
+      top: 12px;
+      height: 0px;
+      width: 0px;
+      border-radius: 0px;
+      border: solid #000;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(0deg) scale(0);
+      -ms-transform: rotate(0deg) scale(0);
+      transform: rotate(0deg) scale(0);
+      opacity:1;
+    	transition: all 0.3s ease-out;
+    	-webkit-transition: all 0.3s ease-out;
+    	-moz-transition: all 0.3s ease-out;
+    	-ms-transition: all 0.3s ease-out;
+    	-o-transition: all 0.3s ease-out;
+  }
+  .checkbox-label input:checked ~ .checkbox-custom::after {
+    -webkit-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+    opacity:1;
+    left: 8px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    background-color: transparent;
+    border-radius: 0;
+  }
+  .checkbox-label .checkbox-custom::before {
+      position: absolute;
+      content: "";
+      left: 10px;
+      top: 10px;
+      width: 0px;
+      height: 0px;
+      border-radius: 0px;
+      border: 2px solid #4de639;
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+  }
+  .checkbox-label input:checked ~ .checkbox-custom::before {
+      left: -3px;
+      top: -3px;
+      width: 24px;
+      height: 24px;
+      border-radius: 0px;
+      -webkit-transform: scale(3);
+      -ms-transform: scale(3);
+      transform: scale(3);
+      opacity:0;
+      z-index: 999;
+      transition: all 0.3s ease-out;
+    	-webkit-transition: all 0.3s ease-out;
+    	-moz-transition: all 0.3s ease-out;
+    	-ms-transition: all 0.3s ease-out;
+    	-o-transition: all 0.3s ease-out;
+  }
+  .background-info {
+    font-size: 14px;
+  }
+  </style>
+</head>
+<body>
+  <nav class="menu">
+    <ul>
+      <li><div class="menu-title">SUSPECTS:</div></li>
+      <li><a href="#max">Max</a></li>
+      <li><a href="#wade">Wade</a></li>
+      <li><a href="#sydney">Sydney</a></li>
+      <li><a href="#ren">Ren</a></li>
+      <li><a href="#randall">Randall</a></li>
+      <li><a href="#mitch">Mitchell</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="container">
+    <img src="https://i.ibb.co/R2dPLxn/suspect-list.jpg" class="title">
+<p style="font-size: 15px;">Now's your time to interview each of the suspects. As you go through the story, you can keep this list open and check off who you've interviewed – it might help you gain insightful information on what questions to ask.</p>
+
+
+<!--- START MAX ---->
+<div class="character-container" id="max">
+<div class="character-img">
+  <img src="https://i.ibb.co/kHP3K7R/character-max.jpg">
+</div>
+<div class="character-info">
+  <h5 class="name">Full Name:</h5>
+Maxwell Quinn Reagan
+<h5>Age:</h5>
+56
+<h5>Occupation:</h5>
+CEO & Founder of QuinnCoin
+<h5>Background Information</h5>
+<ul class="background-info">
+  <li><b>Education:</b> Some college, dropped out to pursue QuinnCoin</li>
+  <li><b>Family:</b> Ex-wife, Ashlyn Reagan, divorced for 3 years</li>
+  <li><b>Family:</b> Daughter, Quinn Reagan, age 6</li>
+  <li><b>Hobbies/Interests:</b> Software Development, Investment, Sailing</li>
+</ul>
+</div>
+<div class="character-checkbox">
+  <label class="checkbox-label">
+      <input type="checkbox">
+      <span class="checkbox-custom rectangular"></span>
+  </label>
+  </div>
+</div>
+<!--- END MAX ---->
+
+
+
+<!--- START WADE ---->
+<div class="character-container" id="wade">
+<div class="character-img">
+  <img src="https://i.ibb.co/SsWWy1J/character-wade.jpg">
+</div>
+<div class="character-info">
+  <h5 class="name">Full Name:</h5>
+Wade Michael Robinson
+<h5>Age:</h5>
+31
+<h5>Occupation:</h5>
+Senior Executive Assistant to Max Reagan at QuinnCoin
+<h5>Background Information</h5>
+<ul class="background-info">
+  <li><b>Education:</b> Bachelor's Degree in Marketing</li>
+  <li><b>Family:</b> Sister, Rosy Robinson, age 25 </li>
+  <li><b>Hobbies/Interests:</b> Art, Sculpture, Literature</li>
+</ul>
+</div>
+<div class="character-checkbox">
+  <label class="checkbox-label">
+      <input type="checkbox">
+      <span class="checkbox-custom rectangular"></span>
+  </label>
+  </div>
+</div>
+<!--- END WADE ---->
+
+
+
+<!--- START SYDNEY ---->
+<div class="character-container" id="sydney">
+<div class="character-img">
+  <img src="https://i.ibb.co/Pcx4xkB/character-sydney.jpg">
+</div>
+<div class="character-info">
+  <h5 class="name">Full Name:</h5>
+Sydney Nyoka
+<h5>Age:</h5>
+29
+<h5>Occupation:</h5>
+Administrative Assistant at QuinnCoin
+<h5>Background Information</h5>
+<ul class="background-info">
+  <li><b>Education:</b> Bachelor's of Science in Nursing, Minor in Psychology</li>
+  <li><b>Family:</b> None</li>
+  <li><b>Hobbies/Interests:</b> Volunteering, Social Media, Activism</li>
+</ul>
+</div>
+<div class="character-checkbox">
+  <label class="checkbox-label">
+      <input type="checkbox">
+      <span class="checkbox-custom rectangular"></span>
+  </label>
+  </div>
+</div>
+<!--- END SYDNEY ---->
+
+
+
+<!--- START REN ---->
+<div class="character-container" id="ren">
+<div class="character-img">
+  <img src="https://i.ibb.co/QfVZ266/character-ren.jpg">
+</div>
+<div class="character-info">
+  <h5 class="name">Full Name:</h5>
+Ren Calce
+<h5>Age:</h5>
+27
+<h5>Occupation:</h5>
+Administrative Assistant at QuinnCoin
+<h5>Background Information</h5>
+<ul class="background-info">
+  <li><b>Education:</b> Attended college for web programming, withdrawn for unpaid fees.</li>
+  <li><b>Family:</b> Brother, Colton Calce, deceased</li>
+  <li><b>Hobbies/Interests:</b> Reading, Video Games</li>
+</ul>
+</div>
+<div class="character-checkbox">
+  <label class="checkbox-label">
+      <input type="checkbox">
+      <span class="checkbox-custom rectangular"></span>
+  </label>
+  </div>
+</div>
+<!--- END REN ---->
+
+<!--- START RANDALL ---->
+<div class="character-container" id="randall">
+<div class="character-img">
+  <img src="https://i.ibb.co/MZJbWFW/character-randall.jpg">
+</div>
+<div class="character-info">
+  <h5 class="name">Full Name:</h5>
+Randall Edward Drake III
+<h5>Age:</h5>
+34
+<h5>Occupation:</h5>
+Director of Cybersecurity at Syphercheck
+<h5>Background Information</h5>
+<ul class="background-info">
+  <li><b>Education:</b> Bachelor's Degree in Computer Science, focus on AI & Robotics</li>
+  <li><b>Family:</b> Brother, Stephen Drake, age 24</li>
+  <li><b>Hobbies/Interests:</b> Programming, Machine learning & AI, Video Games</li>
+</ul>
+</div>
+<div class="character-checkbox">
+  <label class="checkbox-label">
+      <input type="checkbox">
+      <span class="checkbox-custom rectangular"></span>
+  </label>
+  </div>
+</div>
+<!--- END RANDALL ---->
+
+<!--- START MITCHELL ---->
+<div class="character-container" id="mitch">
+<div class="character-img">
+  <img src="https://i.ibb.co/sgmWLxQ/character-mitchell.jpg">
+</div>
+<div class="character-info">
+  <h5 class="name">Full Name:</h5>
+Mitchell Cohen
+<h5>Age:</h5>
+22
+<h5>Occupation:</h5>
+Cybersecurity Engineer at Syphercheck
+<h5>Background Information</h5>
+<ul class="background-info">
+  <li><b>Education:</b> Bachelor's Degree in Information Technology</li>
+  <li><b>Family:</b> Parents, Stephen & Linda Cohen</li>
+  <li><b>Family:</b> 6 siblings, not relevant</li>
+  <li><b>Hobbies/Interests:</b> Programming, Sudoku, Rubik's Cubes</li>
+</ul>
+</div>
+<div class="character-checkbox">
+  <label class="checkbox-label">
+      <input type="checkbox">
+      <span class="checkbox-custom rectangular"></span>
+  </label>
+  </div>
+</div>
+<!--- END RANDALL ---->
+
+  </div>
+<div style="height: 800px;"></div>
+</body>
+</html>
