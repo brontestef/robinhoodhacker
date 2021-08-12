@@ -11,7 +11,9 @@
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Finding the Robin Hood Hacker.</tw-noscript></noscript></tw-story>
 <tw-storydata name="Finding the Robin Hood Hacker" startnode="15" creator="Twine" creator-version="2.3.14" ifid="0880560B-1E5E-4063-87E9-A59FEF51963C" zoom="0.6" format="Harlowe" format-version="3.2.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Rock+Salt&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 h1 {
   font-family: 'Roboto Mono', monospace;
@@ -58,9 +60,6 @@ tw-story, tw-passage {
 tw-icon {
   color: #fff;
   opacity: 1!important;
-  position: fixed;
-  top: 45px;
-  margin-left: -20px;
   transition: all 0.3s;
 }
 
@@ -136,6 +135,16 @@ background: linear-gradient(180deg, rgba(18,18,18,1) 0%, rgba(0,0,0,1) 100%);
   font-family: 'Roboto Mono', monospace;
 }
 
+.message {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.handwriting {
+  font-family: 'Rock Salt', cursive;
+  letter-spacing: 3px;
+  font-size: 16px;
+}
+
 .suspect { 
   width: 15.5%;
   filter: grayscale(100%);
@@ -164,6 +173,13 @@ tw-link.hover {
   color: #4de639;
 }
 
+.video {
+      filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
+    filter: gray; /* IE6-9 */
+	  -webkit-filter: grayscale(99%); /* Chrome 19+ & Safari 6+ */
+	  -webkit-backface-visibility: hidden;  /* Fix for transition flickering */
+}
+
 @media only screen and (max-width: 600px) {
 tw-story {
   margin: 0px;
@@ -187,7 +203,7 @@ tw-passage, tw-expression, tw-consecutive-br, .profiles {
 &amp;emsp;&amp;emsp;You linger for a moment in the back seat of the taxi, looking up at the massive building in front of you with prickling apprehension. You take a deep, slow breath in, reclaiming your composure. The building looks how you might expect – visually, a bit boring – but absolutely colossal, solid dark grey brick, with very little windows. This is a new feat for you, completely outside of your comfort zone – cyber crimes. You exhale and shake off the self-doubt, hoping you might be the only person who knows that you’re out of your league, here. 
 
 
-&amp;emsp;&amp;emsp;“Thank you, sir,” you say with convincing false confidence to the driver. The confidence quickly subsides as you hold your watch to his payment device, and give it a shake. Nothing. “Er… sorry… uh…”, you scramble, smiling sheepishly at the driver. In a panic, you tap the face of your watch, flail your wrist in front of the device again, and hear a quick beep, indicating the payment finally went through. You free a sigh of relief. 
+&amp;emsp;&amp;emsp;“Thank you, sir,” you say with convincing false confidence to the driver. The confidence quickly subsides as you hold your watch to his payment device, and give it a shake. Nothing. “Er… sorry… uh…”, you scramble, smiling sheepishly at the driver. In a panic, you tap the face of your watch, flail your wrist in front of the device again, and hear a quick //BEEP//, indicating the payment finally went through. You free a sigh of relief. 
 
 
 &amp;emsp;&amp;emsp;//“86 credits, charged to, QuinnCoin Corp.”// a computerized voice chimes back. QuinnCoin Corporation. It’s still sinking in. QuinnCoin is the current leading corporation for buying, selling, and storing cryptocurrency, and by some stroke of luck  – or ignorance – they’ve hired you as their private detective to uncover a series of cryptocurrency theft for their clients. You’re about to be briefed by Max Reagan, CEO and founder of QuinnCoin, and you’re not quite sure what to expect. You have extensive experience as a criminal profiler; you know //people// very well. Technology? Not so much.
@@ -238,7 +254,7 @@ Most recent travel destination, or where you&#39;d like to travel
 (input-box:2bind $travel,&quot;=XX=&quot;)
 
 [[Continue &amp;#x2192; -&gt;3: Meeting Wade Robinson]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="3: Meeting Wade Robinson" tags="" position="600,225" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="3: Meeting Wade Robinson" tags="" position="598.3333333333334,225" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
 &lt;div class=&quot;page-title&quot;&gt;3: Meeting Wade&lt;/div&gt;
 
 &amp;emsp;&amp;emsp;“Thank you. Detective $name, Mr. Reagan has been expecting you! Your watch has been synchronized to your destination. Please sanitize upon entering our facilities, and from all of us at QuinnCoin, have a pleasant day.” She raises her hand with a gesture towards the door, and it slides open. 
@@ -247,7 +263,7 @@ Most recent travel destination, or where you&#39;d like to travel
 
 &amp;emsp;&amp;emsp;//“Elevator 17, Floor 5, Room 14,”// chimes the computerized voice. Elevator 17 opens accordingly, and brings you to the fifth floor. The elevator door opens, and immediately your watch responds. //“Mr. Reagan will be ready for you in… 6 minutes…  please take a seat.”//  The only accessible area on this floor seems to be a waiting room with a couch, magazines, and a television playing the local news. The story is one you have already briefed yourself on quite well:
 
-&amp;emsp;&amp;emsp;//“It would appear that the notorious cyber criminal known as the ‘Robin Hood Hacker’ has struck again. This morning, there was yet another attack on the QuinnCoin Corporation, with millions of dollars taken from accounts. The following day, millions were mysteriously donated to a local children&#39;s hospital. TTV has reached out to CEO and Founder of QuinnCoin, Max Reagan, for comment, but –”//
+&amp;emsp;&amp;emsp;//“It would appear that the notorious cyber criminal known as the ‘Robin Hood Hacker’ has struck again. This morning, there was yet another attack on the QuinnCoin Corporation, with millions of dollars taken from accounts. The following day, millions were mysteriously donated to the Grand Clavis Medical Centre. TTV has reached out to CEO and Founder of QuinnCoin, Max Reagan, for comment, but –”//
 
 &amp;emsp;&amp;emsp;The television shuts off abruptly as a young, sharply dressed man enters the room. He holds a tablet in his right hand, a stylus in his left, seemingly checking off a list.
 
@@ -271,7 +287,7 @@ Most recent travel destination, or where you&#39;d like to travel
 
 &amp;emsp;&amp;emsp;“Of course, that&#39;s what I&#39;m here for. So, what exactly //is// going on?” you ask.
 
-&amp;emsp;&amp;emsp;“Well, QuinnCoin’s high-profile accounts are being hacked one by one. It’s //only// our list of highest investors, the “premium” clients. No other accounts have been affected. We’ve hired a third-party cybersecurity team who have done risk assessments, vulnerability scanning, penetration testing – no vulnerabilities have been detected in our system. Yet somehow this &quot;Robin Hood Hacker&quot; has managed to get in. So we’re trying a different approach – we need your help to figure it out.”
+&amp;emsp;&amp;emsp;“Well, QuinnCoin’s high-profile accounts are being hacked one by one. It’s //only// our list of highest investors, the &#39;premium&#39; clients, with millions upon millions of dollars in cryptocurrency stored in these accounts... no other accounts have been affected. Our internal team hasn&#39;t found anything, we hired a third-party cybersecurity company to continue with cybersecurity assessments and monitoring – no answers. //No// vulnerabilities have been detected in our internal system. Somehow this &quot;Robin Hood Hacker&quot;... he&#39;s always steps ahead. So we’re trying a different approach – we need your help to figure it out.”
 
 
 &lt;div class=&quot;answers&quot;&gt;
@@ -284,7 +300,7 @@ Most recent travel destination, or where you&#39;d like to travel
 
 &amp;emsp;&amp;emsp;“Please follow me.” He leads you out of the waiting room and down the long hallway until you reach Room 14. You’re a bit curious to see what else might occupy the fifth floor, but focus on the matter at hand.
 
-&amp;emsp;&amp;emsp;Wade brings you to a large, open office space, where only three desks sit in a gigantic room. He takes a seat in a large leather chair, and gestures to the chair across for you to sit. At the other two desks, young women sit opposite each other, typing away at their computers. “Meet the two other assistants – this is Sydney,” he says, gesturing at a young woman with long pink hair and an eyebrow piercing. She nods hello, but doesn’t look up from her screen. “... and Ren,” Ren has dark hair, large glasses, and greets you with a big smile. She stops typing and steps up to give you a small bow.
+&amp;emsp;&amp;emsp;Wade brings you to a large, open office space, where only three desks sit in a gigantic room. He takes a seat in a large leather chair, and gestures to the chair across for you to sit. At the other two desks, young women sit opposite each other, typing away at their computers. “Meet Mr. Reagan&#39;s two other assistants – this is Sydney,” he says, gesturing at a young woman with long pink hair and an eyebrow piercing. She nods hello, but doesn’t look up from her screen. “... and Ren,” Ren has dark hair, large glasses, and greets you with a big smile. She stops typing and steps up to give you a small bow.
 
 &amp;emsp;&amp;emsp;“Detective $name, thanks for coming. We’re so grateful you’re here to get this all under control.” she says. “Let me know if there’s anything I can help you with.” Wade shoos her away and gestures for you to sit in the chair across from his desk. 
 
@@ -292,7 +308,7 @@ Most recent travel destination, or where you&#39;d like to travel
 
 &amp;emsp;&amp;emsp;“Of course, that&#39;s what I&#39;m here for. So, what exactly //is// going on?” you ask.
 
-&amp;emsp;&amp;emsp;“Well, QuinnCoin’s high-profile accounts are being hacked one by one. It’s //only// our list of highest investors, the “premium” clients, with millions upon millions of dollars in cryptocurrency stored in these accounts. No other accounts have been affected. We’ve hired a cybersecurity team who have done risk assessments, vulnerability scanning, penetration testing – no answers. No vulnerabilities have been detected in our internal system. Yet somehow this &quot;Robin Hood Hacker&quot; has managed to get in. So we’re trying a different approach – we need your help to figure it out.”
+&amp;emsp;&amp;emsp;“Well, QuinnCoin’s high-profile accounts are being hacked one by one. It’s //only// our list of highest investors, the &#39;premium&#39; clients, with millions upon millions of dollars in cryptocurrency stored in these accounts... no other accounts have been affected. Our internal team hasn&#39;t found anything, we hired a third-party cybersecurity company to continue with cybersecurity assessments and monitoring – no answers. //No// vulnerabilities have been detected in our internal system. Somehow this &quot;Robin Hood Hacker&quot;... he&#39;s always steps ahead. So we’re trying a different approach – we need your help to figure it out.”
 
 
 &lt;div class=&quot;answers&quot;&gt;
@@ -313,7 +329,7 @@ Most recent travel destination, or where you&#39;d like to travel
 
 &amp;emsp;&amp;emsp;“Of course, that&#39;s what I&#39;m here for. So, what exactly //is// going on?” you ask.
 
-&amp;emsp;&amp;emsp;“Well, QuinnCoin’s high-profile accounts are being hacked one by one. It’s //only// our list of highest investors, the “premium” clients, with millions upon millions of dollars in cryptocurrency stored in these accounts. No other accounts have been affected. We’ve hired a cybersecurity team who have done risk assessments, vulnerability scanning, penetration testing – no answers. No vulnerabilities have been detected in our internal system. Yet somehow this &quot;Robin Hood Hacker&quot; has managed to get in. So we’re trying a different approach – we need your help to figure it out.”
+&amp;emsp;&amp;emsp;“Well, QuinnCoin’s high-profile accounts are being hacked one by one. It’s //only// our list of highest investors, the &#39;premium&#39; clients, with millions upon millions of dollars in cryptocurrency stored in these accounts... no other accounts have been affected. Our internal team hasn&#39;t found anything, we hired a third-party cybersecurity company to continue with cybersecurity assessments and monitoring – no answers. //No// vulnerabilities have been detected in our internal system. Somehow this &quot;Robin Hood Hacker&quot;... he&#39;s always steps ahead. So we’re trying a different approach – we need your help to figure it out.”
 
 
 &lt;div class=&quot;answers&quot;&gt;
@@ -330,7 +346,7 @@ Most recent travel destination, or where you&#39;d like to travel
 
 &amp;emsp;&amp;emsp;“I, er, I honestly don’t know, Detective,” he responds. “He’s stealing. I’m not sure why anyone would do that.” This causes Sydney with the pink hair to finally take her eyes off her screen with a small huff.
 
-&amp;emsp;&amp;emsp;“You’re //joking// right?” she says, rolling her eyes. “Don&#39;t BS, Wade. We know why he’s doing this. Each time an account is breached, the next day, it gets transferred to a different children’s charity or youth shelter. Every. Last. Cent. The Robin doesn&#39;t take anything for himself. It&#39;s brave, really.”
+&amp;emsp;&amp;emsp;“You’re //joking// right?” she says, rolling her eyes. “Don&#39;t BS, Wade. We know why he’s doing this.” She turns to you, arms crossed. “Each time an account is breached, the next day, it gets transferred to a different children’s charity, hospital, youth shelter, or non-profit. Every. Last. Cent. The Robin doesn&#39;t take anything for himself. It&#39;s... brave, really.”
 
 
 &lt;div class=&quot;answers&quot;&gt;
@@ -347,19 +363,19 @@ Most recent travel destination, or where you&#39;d like to travel
 
 &amp;emsp;&amp;emsp;“You want any?,” you say to Wade, mouth half-full.
 
-&amp;emsp;&amp;emsp;“Er, no, thank you. Let&#39;s, ah, refocus? Bottom line is, this is giving QuinnCoin a bad reputation – one that isn’t safe. We haven’t had a single security breach in the 38 years we’ve been in business, then this happens.”
+&amp;emsp;&amp;emsp;“Er, no, thank you. Let&#39;s, ah, refocus? Bottom line is, this is giving QuinnCoin a bad reputation – one that isn’t safe. We haven’t had a single security breach in the 38 years we’ve been in business, then this happens. We need to make sure users understand their information isn&#39;t at risk.”
 
 &amp;emsp;&amp;emsp;“Right. So when did the attacks start?” you ask.
 
 &amp;emsp;&amp;emsp;“About four months ago, but sixteen accounts have already been compromised. One a week, every Monday at 6am.” 
 
-&amp;emsp;&amp;emsp;“Well, that’s a start. There’s a pattern,” you say. “So the security engineers haven’t found a single trace of vulnerability... that might suggest that the network isn’t being penetrated from the outside at all.” Wade looks to Ren and Sydney with uncertainty. “I’d like to start by interviewing key QuinnCoin stakeholders and employees,” you suggest. 
+&amp;emsp;&amp;emsp;“Well, that’s a start. There’s a pattern,” you say. “So the security engineers haven’t found a single trace of vulnerability... well... that might suggest that the network isn’t being penetrated from the outside at all.” Wade looks to Ren and Sydney with uncertainty. “I’d like to start by interviewing key QuinnCoin stakeholders and employees,”
 
 &amp;emsp;&amp;emsp;There was a short hesitation and an uncomfortable silence. You sense a veil of tension in the room, but you know you need to follow your gut – it&#39;s usually right.
 
 &amp;emsp;&amp;emsp;“Uh, yes, of course, right away, Detective $name,” says Wade. He immediately begins typing. “I’ll put together a list for you.”
 
-&amp;emsp;&amp;emsp;“I’d like anyone who has access to information on these high-profile accounts, names of the account holders, and security professionals QuinnCoin has hired to solve this case. I also //must// speak to Mr. Reagan. If my hunch is right, and the vulnerability is coming from within, I’ll need his input to solve this case.”
+&amp;emsp;&amp;emsp;“I’d like anyone who has access to information on these &#39;premium&#39; accounts, names of the account holders, and security professionals QuinnCoin has hired to solve this case. I also //must// speak to Mr. Reagan. If my hunch is right, and the vulnerability is coming from within, I’ll need his input to solve this case.”
 
 &amp;emsp;&amp;emsp;“Understood,” says Wade. Sydney and Ren go back to typing away. “Ren, check his calendar and tell him it’s urgent. Detective $name, I’ll have the list for you tonight. Anything else I can do for you?”
 
@@ -371,23 +387,23 @@ Most recent travel destination, or where you&#39;d like to travel
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="6.1: Suspicious of Sydney" tags="" position="350,650" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
 &lt;div class=&quot;page-title&quot;&gt;6.1: Suspicious of Sydney&lt;/div&gt;
 
-&amp;emsp;&amp;emsp;“It sounds like you think the hacker is a hero...” you suggest calmly to Sydney. She crosses her arms and glares your way. 
+&amp;emsp;&amp;emsp;“It sounds like you think the hacker is a hero...” you suggest calmly to Sydney. She shoots you a fixed glare.
 
-&amp;emsp;&amp;emsp;“Yeah, and //so what// if I do?” 
+&amp;emsp;&amp;emsp;“Yeah, and //so what// if I do –” 
 
-&amp;emsp;&amp;emsp;“Either way,” Wade interjects, easing the tension. “It’s giving QuinnCoin a bad reputation – one that isn’t safe. We haven’t had a single security breach in the 38 years we’ve been in business, then this happens.”
+&amp;emsp;&amp;emsp;“Either way,” Wade interjects, easing the tension. “It’s giving QuinnCoin a bad reputation – one that isn’t safe. We haven’t had a single security breach in the 38 years we’ve been in business, then, this happens.”
 
 &amp;emsp;&amp;emsp;“So when did the attacks start?” you ask him.
 
 &amp;emsp;&amp;emsp;“About four months ago, but sixteen accounts have already been compromised. One a week, every Monday at 6am.” 
 
-&amp;emsp;&amp;emsp;“Well, that’s a start. There’s a pattern,” you say. “So the security engineers haven’t found a single trace of vulnerability... that might suggest that the network isn’t being penetrated from the outside at all.” You look directly at Sydney with a subtle smirk. “I’d like to start by interviewing key QuinnCoin stakeholders and employees,” you suggest. 
+&amp;emsp;&amp;emsp;“Well, that’s a start. There’s a pattern,” you say. “So the security engineers haven’t found a single trace of vulnerability... well... that might suggest that the network isn’t being penetrated from the outside at all.” You look directly at Sydney with a subtle smirk. “I’d like to start by interviewing key QuinnCoin stakeholders and employees,”
 
 &amp;emsp;&amp;emsp;There was a short hesitation and an uncomfortable silence. You sense a veil of tension in the room, but you know you need to follow your gut – it&#39;s usually right.
 
-&amp;emsp;&amp;emsp;“Uh, of course, right away, Detective $name,” says Wade. He immediately begins typing. “I’ll put together a list for you.”
+&amp;emsp;&amp;emsp;“Uh, yes, of course, right away, Detective $name,” says Wade. He immediately begins typing. “I’ll put together a list for you.”
 
-&amp;emsp;&amp;emsp;“I’d like anyone who has access to information on these high-profile accounts, names of the account holders, and security professionals QuinnCoin has hired to solve this case. I also //must// speak to Mr. Reagan. If my hunch is right, and the vulnerability is coming from within, I’ll need his input to solve this case.”
+&amp;emsp;&amp;emsp;“I’d like anyone who has access to information on these &#39;premium&#39; accounts, names of the account holders, and security professionals QuinnCoin has hired to solve this case. I also //must// speak to Mr. Reagan. If my hunch is right, and the vulnerability is coming from within, I’ll need his input to solve this case.”
 
 &amp;emsp;&amp;emsp;“Understood,” says Wade. Sydney and Ren go back to typing away. “Ren, check his calendar and tell him it’s urgent. Detective $name, I’ll have the list for you tonight. Anything else I can do for you?”
 
@@ -397,21 +413,21 @@ Most recent travel destination, or where you&#39;d like to travel
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="6.2: Suspicious of Wade" tags="" position="475,650" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
 &lt;div class=&quot;page-title&quot;&gt;6.2: Suspicious of Wade&lt;/div&gt;
 
-&amp;emsp;&amp;emsp;“That&#39;s a good point, Sydney. I mean... is the hacker really a bad guy here?” you suggest to Wade, coolly gaging his reaction. “If he&#39;s taking from billionares and giving it to people who need it... should we really be putting a stop to this at all?” Sydney and Ren look to each other with uneasiness.
+&amp;emsp;&amp;emsp;“That&#39;s a good point, Sydney. I mean... is the hacker //really// a bad guy here?” you suggest to Wade, coolly gauging his reaction. “If he&#39;s taking from billionares and giving it to people who truly need it... should we really be putting a stop to this at all?” Sydney and Ren look to each other with uneasiness.
 
-&amp;emsp;&amp;emsp;“I, um, I...” he squirms for a moment, then recovers. “It’s giving QuinnCoin a bad reputation – one that isn’t safe. We haven’t had a single security breach in the 38 years we’ve been in business, then this happens.”
+&amp;emsp;&amp;emsp;“I, um, I...” he squirms for a moment, then recovers. “It’s giving QuinnCoin a bad reputation – one that isn’t safe. We haven’t had a single security breach in the 38 years we’ve been in business, then //this// happens. We need to make sure users understand their information isn&#39;t at risk.”
 
-&amp;emsp;&amp;emsp;“So when did the attacks start?” you ask.
+&amp;emsp;&amp;emsp;“Sure. So when did the attacks start?” you ask.
 
 &amp;emsp;&amp;emsp;“About four months ago, but sixteen accounts have already been compromised. One a week, every Monday at 6am.” 
 
-&amp;emsp;&amp;emsp;“Well, that’s a start. There’s a pattern,” you say. “So the security engineers haven’t found a single trace of vulnerability... that might suggest that the network isn’t being penetrated from the outside at all.” Wade looks to Ren and Sydney with uncertainty, and you can almost see the sweat form on his forehead. “I’d like to start by interviewing key QuinnCoin stakeholders and employees,” you suggest. 
+&amp;emsp;&amp;emsp;“Well, that’s a start. There’s a pattern,” you say. “So the security engineers haven’t found a single trace of vulnerability... well... that might suggest that the network isn’t being penetrated from the outside at all.” Wade looks to Ren and Sydney with uncertainty, and you can almost see the sweat form on his forehead. “I’d like to start by interviewing key QuinnCoin stakeholders and employees,”
 
 &amp;emsp;&amp;emsp;There was a short hesitation and an uncomfortable silence. You sense a veil of tension in the room, but you know you need to follow your gut – it&#39;s usually right.
 
-&amp;emsp;&amp;emsp;“Uh, of course, right away, Detective $name,” says Wade. He immediately begins typing. “I’ll put together a list for you.”
+&amp;emsp;&amp;emsp;“Uh, yes, of course, right away, Detective $name,” says Wade. He immediately begins typing. “I’ll put together a list for you.”
 
-&amp;emsp;&amp;emsp;“I’d like anyone who has access to information on these high-profile accounts, names of the account holders, and security professionals QuinnCoin has hired to solve this case. I also //must// speak to Mr. Reagan. If my hunch is right, and the vulnerability is coming from within, I’ll need his input to solve this case.”
+&amp;emsp;&amp;emsp;“I’d like anyone who has access to information on these &#39;premium&#39; accounts, names of the account holders, and security professionals QuinnCoin has hired to solve this case. I also //must// speak to Mr. Reagan. If my hunch is right, and the vulnerability is coming from within, I’ll need his input to solve this case.”
 
 &amp;emsp;&amp;emsp;“Understood,” says Wade. Sydney and Ren go back to typing away. “Ren, check his calendar and tell him it’s urgent. Detective $name, I’ll have the list for you tonight. Anything else I can do for you?”
 
@@ -420,26 +436,26 @@ Most recent travel destination, or where you&#39;d like to travel
 [[&quot;That will be all Wade, thank you.&quot;-&gt;7: Later that Night]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="6.4: Request for More" tags="" position="725,650" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
 &lt;div class=&quot;page-title&quot;&gt;6.4: Request for More&lt;/div&gt;
-&amp;emsp;&amp;emsp;“Bottom line is, it’s giving QuinnCoin a bad reputation – one that isn’t safe. We haven’t had a single security breach in the 38 years we’ve been in business, then this happens.”
+&amp;emsp;&amp;emsp;“Bottom line is, it’s giving QuinnCoin a bad reputation – one that isn’t safe. We haven’t had a single security breach in the 38 years we’ve been in business, then this happens. We need to make sure users understand their information isn&#39;t at risk.”
 
 &amp;emsp;&amp;emsp;“So when did the attacks start?” you ask.
 
 &amp;emsp;&amp;emsp;“About four months ago, but sixteen accounts have already been compromised. One a week, every Monday at 6am.” 
 
-&amp;emsp;&amp;emsp;“Well, that’s a start. There’s a pattern,” you say. “So the security engineers haven’t found a single trace of vulnerability... that might suggest that the network isn’t being penetrated from the outside at all.” Wade looks to Ren and Sydney with uncertainty. “I’d like to start by interviewing key QuinnCoin stakeholders and employees,” you suggest. 
+&amp;emsp;&amp;emsp;“Well, that’s a start. There’s a pattern,” you say. “So the security engineers haven’t found a single trace of vulnerability... well... that might suggest that the network isn’t being penetrated from the outside at all.” Wade looks to Ren and Sydney with uncertainty. “I’d like to start by interviewing key QuinnCoin stakeholders and employees,”
 
 &amp;emsp;&amp;emsp;There was a short hesitation and an uncomfortable silence. You sense a veil of tension in the room, but you know you need to follow your gut – it&#39;s usually right.
 
 &amp;emsp;&amp;emsp;“Uh, yes, of course, right away, Detective $name,” says Wade. He immediately begins typing. “I’ll put together a list for you.”
 
-&amp;emsp;&amp;emsp;“I’d like anyone who has access to information on these high-profile accounts, names of the account holders, and security professionals QuinnCoin has hired to solve this case. I also //must// speak to Mr. Reagan. If my hunch is right, and the vulnerability is coming from within, I’ll need his input to solve this case.”
+&amp;emsp;&amp;emsp;“I’d like anyone who has access to information on these &#39;premium&#39; accounts, names of the account holders, and security professionals QuinnCoin has hired to solve this case. I also //must// speak to Mr. Reagan. If my hunch is right, and the vulnerability is coming from within, I’ll need his input to solve this case.”
 
 &amp;emsp;&amp;emsp;“Understood,” says Wade. Sydney and Ren go back to typing away. “Ren, check his calendar and tell him it’s urgent. Detective $name, I’ll have the list for you tonight. Anything else I can do for you?”
 
 &lt;div class=&quot;answers&quot;&gt;
 &lt;h2&gt;You respond:&lt;/h2&gt;
 [[&quot;That will be all Wade, thank you.&quot;-&gt;7: Later that Night]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="Suspects Unlocked" tags="" position="103.33333333333334,1815.8333333333335" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="Suspects Unlocked" tags="" position="370,3446.6666666666665" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
 &lt;div class=&quot;page-title&quot;&gt;6.1: Later that Night&lt;/div&gt;
 
 &amp;emsp;&amp;emsp;Later that night, you sit in your apartment mindlessly playing $tvshow on your TV, with your laptop propped up on the arm of your couch, waiting for Wade’s suspect list. This was your life in your small studio apartment. Because of the complexity of your job, the time it demands, and your tendency to not trust people, you didn’t have many friends or social gatherings to attend. So, your evenings were filled with research, and occasionally the time to unwind with a $drank and an episode or two of $tvshow.
@@ -510,7 +526,7 @@ Most recent travel destination, or where you&#39;d like to travel
 
 &lt;hr&gt;
 
-&amp;emsp;&amp;emsp;You try to sleep, but have a restless night. Your watch dings at roughly 5 in the morning, indicating a new message. You’re hoping it’s not from your new “friend”. You see the from address: //wade@quinncoin.com// with relief, and open up the attached list. It contains a large list of names and account numbers, but you focus only on the QuinnCoin employees and security team involved:
+&amp;emsp;&amp;emsp;You try to sleep, but have a restless night. Your watch dings at roughly 5 in the morning, indicating a new message. You’re hoping it’s not from your new “friend”. You see the from address with relief: //wade@quinncoin.com//, and open up the attached list. It contains a large list of names and account numbers, but you focus only on the QuinnCoin employees and security team involved:
 
 
 &#39;&#39;Max Reagan&#39;&#39;, CEO and founder of QuinnCoin
@@ -523,8 +539,7 @@ Most recent travel destination, or where you&#39;d like to travel
 &lt;div class=&quot;profiles&quot;&gt;
 &lt;h2&gt;You&#39;ve unlocked the suspect profiles!&lt;/h2&gt;
 &lt;div style=&quot;font-size: 15px;&quot;&gt;You now have access to more information on each suspect. &lt;a style=&quot;color: #fff;&quot; target=_blank href=&quot;https://brontestef.github.io/robinhoodhacker/suspects.html&quot;&gt;click here to view the full details of each suspect in a secondary tab&lt;/a&gt;. It&#39;s recommended that you reference this page as you interview and check off suspects you&#39;ve talked to as you continue with the story.
-
-Moving forward, after each interview, you&#39;ll be able to hover over each suspect image for a hint on what you&#39;ve discovered about their potential motive.&lt;/div&gt;
+&lt;/div&gt;
 &lt;a target=_blank href=&quot;https://brontestef.github.io/robinhoodhacker/suspects.html#max&quot;&gt;&lt;img class=&quot;suspect&quot; src=&quot;https://i.ibb.co/kHP3K7R/character-max.jpg&quot;&gt;&lt;/a&gt;&lt;a target=_blank href=&quot;https://brontestef.github.io/robinhoodhacker/suspects.html#wade&quot;&gt;&lt;img class=&quot;suspect&quot; src=&quot;https://i.ibb.co/SsWWy1J/character-wade.jpg&quot;&gt;&lt;/a&gt;&lt;a target=_blank href=&quot;https://brontestef.github.io/robinhoodhacker/suspects.html#sydney&quot;&gt;&lt;img class=&quot;suspect&quot; src=&quot;https://i.ibb.co/c8BqcsH/character-sydney.jpg&quot;&gt;&lt;/a&gt;&lt;a target=_blank href=&quot;https://brontestef.github.io/robinhoodhacker/suspects.html#ren&quot;&gt;&lt;img class=&quot;suspect&quot; src=&quot;https://i.ibb.co/QfVZ266/character-ren.jpg&quot;&gt;&lt;/a&gt;&lt;a target=_blank href=&quot;https://brontestef.github.io/robinhoodhacker/suspects.html#randall&quot;&gt;&lt;img class=&quot;suspect&quot; src=&quot;https://i.ibb.co/MZJbWFW/character-randall.jpg&quot;&gt;&lt;/a&gt;&lt;a target=_blank href=&quot;https://brontestef.github.io/robinhoodhacker/suspects.html#mitch&quot;&gt;&lt;img class=&quot;suspect&quot; src=&quot;https://i.ibb.co/sgmWLxQ/character-mitchell.jpg&quot;&gt;&lt;/a&gt;
 
 
@@ -540,7 +555,7 @@ Wade, Randall, and Mitchell are available today. Who do you want to interview fi
 &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="13" name="Test" tags="" position="224.99999999999994,1817.5000000000002" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+</tw-passagedata><tw-passagedata pid="13" name="Test" tags="" position="495,3446.6666666666665" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
 
   &lt;div id=&quot;typedtext&quot; class=&quot;intro-message&quot;&gt;&lt;/div&gt;
 
@@ -586,7 +601,7 @@ function typewriter()
 
 
 typewriter();
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="14" name="Untitled Passage" tags="" position="101.66666666666671,1930.8333333333335" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="14" name="Untitled Passage" tags="" position="370,3546.6666666666665" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
 &lt;div class=&quot;page-title&quot;&gt;1: Arriving at QuinnCoin&lt;/div&gt;
 &amp;emsp;&amp;emsp;You linger for a moment in the back seat of the taxi, looking up at the massive building in front of you with prickling apprehension. You take a deep, slow breath in, reclaiming your composure. The building looks how you might expect – visually, a bit boring – but absolutely colossal, solid dark grey brick, with very little windows. This is a new feat for you, completely outside of your comfort zone – cyber crimes. You exhale and shake off the self-doubt, hoping you might be the only person who knows that you’re out of your league, here. 
 
@@ -609,7 +624,7 @@ typewriter();
 &lt;script&gt;
 // set up text to print, each item in array is new line
 var aText = new Array(
-&quot;You are a criminal profiler hired by QuinnCoin Corporation, the world&#39;s leading cryptocurrency bank and service provider.&quot;,
+&quot;You are a criminal profiler hired by QuinnCoin Corporation, the world&#39;s leading cryptocurrency bank and financial service provider.&quot;,
 &quot;Over the past few months, they&#39;ve experienced major security breaches, by a hacker known as the &#39;Robin Hood&#39; hacker.&quot;,
 &quot;This hacker has become infamous for gaining access to high-profile accounts and immediately donating all the proceeds to various charities and non-profit organizations.&quot;,
 &quot;QuinnCoin has gone through various security protocols, but haven&#39;t been able to find the source of the breach.&quot;,
@@ -650,11 +665,11 @@ function typewriter()
 
 
 typewriter();
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="16" name="Suspect Profiles" tags="" position="356.6666666666667,1820.8333333333335" size="100,100">All of the profiles will go here.</tw-passagedata><tw-passagedata pid="17" name="Untitled Passage 1" tags="" position="21.666666666666668,1606.666666666667" size="100,100">You call Wade and tell him you need to see him straight away. He agrees to meet you at the Não Cafe, just blocks from your apartment. 
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="16" name="Suspect Profiles" tags="" position="620,3446.6666666666665" size="100,100">All of the profiles will go here.</tw-passagedata><tw-passagedata pid="17" name="Untitled Passage 1" tags="" position="295,3221.6666666666665" size="100,100">You call Wade and tell him you need to see him straight away. He agrees to meet you at the Não Cafe, just blocks from your apartment. 
 </tw-passagedata><tw-passagedata pid="18" name="8: Interviewing Wade" tags="" position="500,925" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
 &lt;div class=&quot;page-title&quot;&gt;8: Interviewing Wade&lt;/div&gt;
 
-&amp;emsp;&amp;emsp;You call Wade and tell him you need to see him straight away. He agrees to meet you at the Não Cafe, just blocks from your apartment. You order a $coffee and get seated. 
+&amp;emsp;&amp;emsp;You call Wade and tell him you need to see him straight away. He agrees to meet you at the Nondum Cafe, just blocks from your apartment. You order a $coffee and get seated. 
 
 &amp;emsp;&amp;emsp;“Thank you for meeting me, Wade,” you say. “I wanted to ask you a few things...”
 
@@ -664,31 +679,68 @@ typewriter();
 [[Sydney and Ren.-&gt;8.2 Wade: Question Two]]
 [[The hacker.-&gt;8.3 Wade: Question Three]]
 
-[[Done with Wade, Continue the story →-&gt;9 Later that Night]]
+[[Done with Wade, interview Randall and Mitchell →-&gt;8: Interviewing Randall &amp; Mitchell]]
+[[Done with Wade, Continue the story →-&gt;9: Later that Night]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="8: Interviewing Randall &amp; Mitchell" tags="" position="650,925" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
 &lt;div class=&quot;page-title&quot;&gt;8: Interviewing Randall &amp; Mitchell&lt;/div&gt;
 
-&amp;emsp;&amp;emsp;Randall and Mitchell are part of the cybersecurity team at Syphercheck, the third party 
+&amp;emsp;&amp;emsp;Randall and Mitchell are part of the cybersecurity team at Syphercheck, the third-party company hired to evaluate QuinnCoin for network vulnerabilities. In the afternoon, you meet them at Perversas – an incredibly high-end restaurant downtown – and find Mitchell already sitting at a table waiting for you. You take a seat across from him.
 
-&amp;emsp;&amp;emsp;“Thank you for meeting me, Wade,” you say. “I wanted to ask you a few things...”
+&amp;emsp;&amp;emsp;“Hi Mitchell, thank you so much for meeting with me,” you start.
+
+&amp;emsp;&amp;emsp;“Oh, hello,” he says timidly. You immediately notice Mitchell seems quite young to be a cybersecurity expert. In jeans, a t-shirt, a grey hoodie, and you notice his body language is awkward and uncomfortable, clearly not prepared to meet you on his own. “Um, Randall is just in the restroom, he should be back soon,” You order a $drink in the meantime and make some quick small talk. He left his keys on the table, and you notice one of his keychains from $travel. That might be your opportunity to break the silence and make Mitchell feel more comfortable opening up to you.
+
+&amp;emsp;&amp;emsp;“Hey, I recognize that, have you been to $travel recently?” you inquire, pointing to his keychain. His face lights up and his posture immediately changes.
+
+&amp;emsp;&amp;emsp;“Yes, it is!” his voice grows lively, “I went a few months ago, it was amazing.”
+
+&amp;emsp;&amp;emsp;“I just came back, too,” you answer. You give him a cheers before you’re quickly interrupted by Randall.
+
+&amp;emsp;&amp;emsp;“Detective $name, pleasure to meet you,” he interrupts, immediately asserting himself into the booth and almost pushing Mitchell aside. Randall also seems quite young – for a Director at a cybersecurity company, at least. “I’m so sorry to keep you waiting, what can we help you with?”
+
+&amp;emsp;&amp;emsp;“As the team assigned to QuinnCoin’s security, I hope you understand why I need to speak with you to get to the bottom of this. I’m wondering what kind of assessments and precautions you went through, and if you found anything suspicious?”
+
+&amp;emsp;&amp;emsp;“We performed various assessments - a full vulnerability assessment, a privacy impact assessment, risk assessments, penetration testing...”
+
+&amp;emsp;&amp;emsp;“Well, with all due respect, Mr. Drake, I’m not sure you did a thorough enough job,” you test him, with a cunning smirk. “If millions are being taken, how is it that a top cybersecurity professional such as yourself finds... //nothing//?”
+
+&amp;emsp;&amp;emsp;“Oh, I assure you, we were //very// thorough,” Randall insists, stiffening up. You&#39;re sure you&#39;ve horribly offended him, but the intent was to push his buttons. “He found a way that simply isn&#39;t traceable. You can confirm with Mr. Reagan – we couldn&#39;t find anything wrong at all. I&#39;m actually afraid this was a waste of your time today, Detective – we don’t have much else to say on the matter.” 
+
+&amp;emsp;&amp;emsp;You feel your watch vibrate on your wrist, and intuitively glance down. The same green font as last night appears:
+
+&lt;div class=&quot;hacker-message&quot;&gt;
+&amp;emsp;&amp;emsp;“Hey Detective, did you know?
+&amp;emsp;&amp;emsp;“Snakes don&#39;t walk, 
+&amp;emsp;&amp;emsp;they slither.”
+&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;You quickly remind yourself to keep your cool, act natural.
+
+&amp;emsp;&amp;emsp;“Ah, so if we have nothing else case-related to talk about,” you start, directing towards Mitchell, “I’d love to hear more about your experience in $travel,”
+
+&amp;emsp;&amp;emsp;“Actually, Detective $name,” Randall butts in, “Mitchell and I have a very busy day back at the office, if you have no further security related questions, we’ll need the time back in our day.” 
+
+&amp;emsp;&amp;emsp;“Of course, Mr. Drake, I appreciate you making the time in your very busy schedule,” you say with a hint of sarcasm. It’s obvious there’s more to this, but they&#39;re not willing to talk; you need to take time to decipher exactly what that means. You slip them both your business card while you evaluate the situation further. “If anything comes up... do give me a call,” you give Mitchell a subtle nod on your way out. 
+
 
 &lt;div class=&quot;answers&quot;&gt;
-&lt;h2&gt;You decide to ask about...&lt;/h2&gt;
-yep
+&lt;h2&gt;Next...&lt;/h2&gt;
+[[Done with Randall and Mitchell, interview Wade →-&gt;8: Interviewing Wade]]
+[[Done with Wade, and Randall/Mitchell, Continue the Story →-&gt;9: Later that Night]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="8.1 Wade: Question One" tags="" position="200,1050" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
 &lt;div class=&quot;page-title&quot;&gt;8: Interviewing Wade&lt;/div&gt;
 
-&amp;emsp;&amp;emsp;“So, how long have you been with QuinnCoin?” you ask. His eyes light up and he smiles.
+&amp;emsp;&amp;emsp;“So, how long have you been with QuinnCoin?” you ask. He immediately flashes a huge grin.
 
 &amp;emsp;&amp;emsp;“I’ve been with QuinnCoin for 11 years, fresh out of University. Mr. Reagan took me in as a young, fresh-eyed graduate and I honestly loved the culture here so much, I never left,” he says. 
 
 &amp;emsp;&amp;emsp;“Speaking of Mr. Reagan… he doesn’t seem very involved in this, does he? Why do you think that is?”
 
-&amp;emsp;&amp;emsp;“This has been an insane time for him, he’s constantly in meetings with the clients affected, trying to smooth things over. He puts a lot of trust in me, so he’s fine with me handling this.”
+&amp;emsp;&amp;emsp;“This has been an insane time for him, he’s constantly in meetings with the clients affected, trying to smooth things over. He puts a lot of trust in me, so, not to worry, Detective – he’s fine with me handling this.”
 
 &amp;emsp;&amp;emsp;“Are you and Mr. Reagan close?”
 
-&amp;emsp;&amp;emsp;“We’re fairly close, yes. We have a great professional relationship.”
+&amp;emsp;&amp;emsp;“We’re very close, yes. We have a great professional relationship.”
 
 
 &lt;div class=&quot;answers&quot;&gt;
@@ -697,21 +749,21 @@ yep
 [[The hacker.-&gt;8.3 Wade: Question Three]]
 
 [[Done with Wade, interview Randall/Mitchell →-&gt;8: Interviewing Randall &amp; Mitchell]]
-[[Done with Wade, move on with the story →-&gt;9 Later that Night]]
+[[Done with Wade, and Randall/Mitchell, Continue the Story →-&gt;9: Later that Night]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="8.2 Wade: Question Two" tags="" position="325,1050" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
 &lt;div class=&quot;page-title&quot;&gt;8: Interviewing Wade&lt;/div&gt;
 
 &amp;emsp;&amp;emsp;“So how about Sydney and Ren? Sydney was very upfront about her stance on the hacker,” you suggest. 
 
-&amp;emsp;&amp;emsp;“Yeah, that’s just Sydney though... she’s a complete hot-head,” he says with a little shrug.
+&amp;emsp;&amp;emsp;“Yeah, that’s just Sydney though... she’s a complete hot-head,” he says with an indifferent, subtle shrug.
 
 &amp;emsp;&amp;emsp;“Do you think she’s capable of doing something like this?” you ask. 
 
-&amp;emsp;&amp;emsp;“No,” he immediately responds. “I know she speaks her mind and can be a little bit abrasive. But she really needs this job… I just don’t think it’s something that she’d risk.”
+&amp;emsp;&amp;emsp;“No,” he immediately responds. “She always speaks her mind and can be a little bit, er, abrasive? Sure. She volunteers in her spare time, so I think a lot of this hits close to home for her, but I just don&#39;t really think she would know //how// to do this.”
 
 &amp;emsp;&amp;emsp;“And Ren?” 
 
-&amp;emsp;&amp;emsp;“No. Sure, Ren&#39;s smart enough to pull it off, but she loves this job too much, too. She’s also very close to Mr. Reagan, I don’t think she’d cause him this much trouble.”
+&amp;emsp;&amp;emsp;“No, I don&#39;t see Ren as a rule-breaker. She’s also incredibly close to Mr. Reagan – I just don’t think she’d want to cause him this much trouble.”
 
 
 &lt;div class=&quot;answers&quot;&gt;
@@ -719,22 +771,785 @@ yep
 [[Working at QuinnCoin.-&gt;8.1 Wade: Question One]]
 [[The hacker.-&gt;8.3 Wade: Question Three]]
 
-[[Done with Wade, Continue the story →-&gt;9 Later that Night]]
+
+[[Done with Wade, interview Randall/Mitchell →-&gt;8: Interviewing Randall &amp; Mitchell]]
+[[Done with Wade, and Randall/Mitchell, Continue the Story →-&gt;9: Later that Night]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="8.3 Wade: Question Three" tags="" position="450,1050" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
 &lt;div class=&quot;page-title&quot;&gt;8: Interviewing Wade&lt;/div&gt;
 
-&amp;emsp;&amp;emsp;“What type of person do you think could do this?”
+&amp;emsp;&amp;emsp;“What type of person do //you// think could do this?”
 
-&amp;emsp;&amp;emsp;“Whoever they are… I think they’re smart – they’ve found another way to break in that the cybersecurity team we hired just couldn’t pick up. How does one break into our accounts, without accessing our network at all?”
+&amp;emsp;&amp;emsp;“Whoever the hacker is… I think he&#39;s outsmarted a lot of people – he&#39;s found another way to break in that the cybersecurity team we hired somehow couldn&#39;t pick up. How does one break into our accounts without leaving a trace?”
 
+&amp;emsp;&amp;emsp;You feel a small rumble from you watch; a text coming in. You take a quick look down. In the same green font as the messages on your screen last night, you see:
+
+&lt;div class=&quot;hacker-message&quot;&gt;
+&amp;emsp;&amp;emsp;“Hello again, $name.
+&amp;emsp;&amp;emsp;Don&#39;t worry,
+&amp;emsp;&amp;emsp;This disguise will fool my own mother.”
+&lt;/div&gt;
+
+You hide any reaction from Wade and continue. 
 
 &lt;div class=&quot;answers&quot;&gt;
 &lt;h2&gt;Ask about...&lt;/h2&gt;
 [[Working at QuinnCoin.-&gt;8.1 Wade: Question One]]
 [[Sydney and Ren.-&gt;8.2 Wade: Question Two]]
 
-[[Done with Wade, Continue the story →-&gt;9 Later that Night]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="9 Later that Night" tags="" position="575,1175" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="24" name="8.4 Randall/Mitchell: Question One" tags="" position="725,1050" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="25" name="8.5 Randall/Mitchell: Question Two" tags="" position="850,1050" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="26" name="8.6 Randall/Mitchell: Question Three" tags="" position="975,1050" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+
+[[Done with Wade, interview Randall/Mitchell →-&gt;8: Interviewing Randall &amp; Mitchell]]
+[[Done with Wade, and Randall/Mitchell, Continue the Story →-&gt;9: Later that Night]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="9: Later that Night" tags="" position="500,1200" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;9: Later that Night&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;Later that night, you sit in your apartment, mulling things over from your day. You pull out your notebook and pen to jot down some quick notes:
+
+&lt;div class=&quot;handwriting&quot;&gt;
+&amp;emsp;&amp;emsp;Wade - loyal to QuinnCoin/Reagan
+&amp;emsp;&amp;emsp;Randall - not willing to cooperate
+&amp;emsp;&amp;emsp;Mitchell - ... knows something?
+&amp;emsp;&amp;emsp;Sydney - volunteers, openly agrees to cause
+&amp;emsp;&amp;emsp;Ren - wouldn&#39;t risk it
+&amp;emsp;&amp;emsp;Max - ???
+&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;You hear a //PING// on your laptop from across the room. You&#39;re ready for another message – maybe they&#39;ll give you a better hint this time. You&#39;ve recieved a new message in your inbox, but the &quot;From:&quot; address is your own email. You open it to see:
+
+&lt;div class=&quot;hacker-message&quot;&gt;
+&amp;emsp;&amp;emsp;“You know somethin&#39;, $name
+&amp;emsp;&amp;emsp;I Was Just Wonderin&#39;,
+&amp;emsp;&amp;emsp;Are We Good Guys Or Bad Guys?
+
+
+&amp;emsp;&amp;emsp;&lt;iframe class=&quot;video&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/3FFNrD6xndI&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;You play through the video and quickly realize... it&#39;s the song from the hacker&#39;s first message to you. You jot down another note:
+
+&lt;div class=&quot;handwriting&quot;&gt;
+&amp;emsp;&amp;emsp;The Robin - communicating through Robin Hood references...
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+&amp;emsp;&amp;emsp;You wake up the next morning with refocused energy, ready to gather all the information you can. Ren is available this morning, Sydney will be available later in the evening. 
+
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;Continue:&lt;/h2&gt;
+
+[[Interview Ren →-&gt;10: Interviewing Ren]]
+
+&lt;/div&gt;
+
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="10: Continue" tags="" position="495,3546.6666666666665" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;10: Then&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;//PING!//
+
+&amp;emsp;&amp;emsp;You jump slightly as your phone lights up. Another message?! The hacker is getting chummy tonight. But the message wasn&#39;t in their typical green font. 
+
+&amp;emsp;&amp;emsp;//“Detective $name. It’s Mitchell. I have more to say.”//
+
+</tw-passagedata><tw-passagedata pid="25" name="12: Interviewing Sydney" tags="" position="500,1573.3333333333333" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;12: Interviewing Sydney&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;Sydney reluctantly agrees to meet you this evening. Across from Cafe Cucullo boasts a very trendy, ‘hipster’ restaurant and brewery called Prope. You’re the first to arrive, so you order yourself a $drank and wait at the bar. 10 minutes go by, and you hear the increasingly familiar PING on your watch – another message... potentially from the Robin.
+
+&lt;div class=&quot;hacker-message&quot;&gt;
+&amp;emsp;&amp;emsp;“Hey, $name. It&#39;s your pal, Robin.
+&amp;emsp;&amp;emsp;I&#39;m no outlaw.
+&amp;emsp;&amp;emsp;Why, someday I&#39;ll be called a great hero.
+&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;At this point, the messages are simply irritating rather than helpful. You set up your laptop at the bar. If Sydney&#39;s going to be late, you might as well dive deeper into your research on Max Reagan. Mr. Reagan has avoided your every attempt at communication, despite calling you here – you intend to figure out why.
+
+&amp;emsp;&amp;emsp;You already have a file on him, but haven&#39;t managed to find anything noteworthy that isn&#39;t already public knoweldge. Founded QuinnCoin midway through college, was wildly successful so decided to drop out to pursue the company, divorced 3 years ago, has multiple boats...
+
+&amp;emsp;&amp;emsp;Until a headline of an article from four years ago catches your eye. 
+
+//&lt;div style=&quot;font-size: 32px; font-weight: 800; padding-left: 120px; width: 70%;&quot;&gt;Quinn Reagan, Daughter of Digital Bank Tycoon Max Reagan, Hospitalized with Serious, Life-Threatening Injuries&lt;/div&gt;//
+&amp;emsp;&amp;emsp;“Detective $name – My favourite person!” Sydney buts in, announcing with astounding sarcasm. You attempt to quickly skim through the first paragraph, but you don&#39;t want her to catch a glimpse of your screen. With a quick look around, you bookmark the page to read after your meeting, and slam your laptop shut. 
+
+&amp;emsp;&amp;emsp;“Sydney, likewise! Thanks for meeting me. Take a seat, order a drink, and let&#39;s get started.” 
+
+&amp;emsp;&amp;emsp;“Let&#39;s get this over with, shall we?”
+
+&amp;emsp;&amp;emsp;“So Sydney, you must understand why you’re on my list of suspects, yes?” You start off slightly confrontational, recalling your combative approach getting a rise out of her before.
+
+&amp;emsp;&amp;emsp;“Uh huh. I know. Because I think he&#39;s doing a great thing?” she says. “That doesn’t mean I’m guilty, but you’re welcome to keep digging.”
+
+&amp;emsp;&amp;emsp;“C&#39;mon, Syd,” you say playfully. “You have to admit it&#39;s a //little// odd how you blatantly agree with the hacker, even though you work for the company that&#39;s being attacked?”
+
+&amp;emsp;&amp;emsp;“Firstly, Detective $name, call me //&#39;Syd&#39;// again, and I&#39;ll roundhouse kick you in the face. Secondly, if I were the hacker, don&#39;t you think it would be //very// stupid of me to be so open about my stance on it? Look, Detective, I&#39;m not sure what to tell you. Do I agree with what he&#39;s doing? Yes, absolutely, I do. Would I have any way of knowing how to do this? No.” She takes a big long gulp and downs half her drink. “Next question.”
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;You decide to ask about...&lt;/h2&gt;
+[[Working at QuinnCoin.-&gt;12.1 Sydney: Question One]]
+[[Wade and Ren.-&gt;12.2 Sydney: Question Two]]
+[[The hacker.-&gt;12.3 Sydney: Question Three]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="10: Interviewing Ren" tags="" position="500,1325" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;10: Interviewing Ren&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;You agree to meet Ren today, at another small cafe just down the street from the QuinnCoin building, called Cafe Cucullo. The mild weather this morning makes for a pleasant walk, as you reflect on your next steps to find the hacker. You’re met with a cloud of the sweet, satisfying scent of coffee, and it guides you right inside.
+
+&amp;emsp;&amp;emsp;“Detective $name, good morning!!” She’s already sitting with a $coffee for you, and stands up to greet you.
+
+&amp;emsp;&amp;emsp;“Oh, thank you,” you say as you grab the coffee. “You&#39;re quite chipper today, huh?”
+
+&amp;emsp;&amp;emsp;“Eh, what can I say? I&#39;m a morning person,” she says with a shrug.
+
+&amp;emsp;&amp;emsp;“Well thank you for meeting with me today,” you say, “I’d like to ask you a few questions…”
+
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;You decide to ask about...&lt;/h2&gt;
+[[Working at QuinnCoin.-&gt;10.1 Ren: Question One]]
+[[Wade and Sydney.-&gt;10.2 Ren: Question Two]]
+[[The hacker.-&gt;10.3 Ren: Question Three]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="10.1 Ren: Question One" tags="" position="500,1450" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;10: Interviewing Ren&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;“So, how long have you been with QuinnCoin?” you ask. 
+
+&amp;emsp;&amp;emsp;“For about two years now – Sydney actually got me the job.”
+
+&amp;emsp;&amp;emsp;“Do you enjoy it there?,”
+
+&amp;emsp;&amp;emsp;“Yes, I&#39;m super grateful. It&#39;s changed my life,” she says. Leaning in, she adds, “//Truthfully//... I dropped out of college a while ago. There aren&#39;t many opportunities out there for me at this pay grade, so I&#39;m very appreciative of Mr. Reagan giving me a chance – he&#39;s become like a father figure to me, actually,”
+
+&amp;emsp;&amp;emsp;“How do you feel about what&#39;s going on?,” you ask. She lets out a big sigh. 
+
+&amp;emsp;&amp;emsp;“I&#39;m definitely conflicted. I know it&#39;s going to great causes, I can&#39;t argue that. It&#39;s hard to sit here and say I wish you&#39;d catch them and turn them in – they&#39;re changing lives. But on the other hand, I feel so loyal to Mr. Reagan. He&#39;s facing a ton of backlash over this, that&#39;s part of the reason why he&#39;s never around.” 
+
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;Ask about...&lt;/h2&gt;
+[[Wade and Sydney.-&gt;10.2 Ren: Question Two]]
+[[The hacker.-&gt;10.3 Ren: Question Three]]
+
+[[Done with Ren, Continue with Sydney →-&gt;12: Interviewing Sydney]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="10.2 Ren: Question Two" tags="" position="625,1450" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;10: Interviewing Ren&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;“How about Wade and Sydney? Sydney made it pretty clear she&#39;s on team &#39;Robin Hood&#39;,” you suggest. She chuckles, shakes her head, and takes a sip of her coffee.
+
+&amp;emsp;&amp;emsp;“Yeah, I guess that&#39;s putting it mildly. Sydney doesn&#39;t know how to control what comes out of her mouth,” she responds. “I know it&#39;s pretty ballsy of her to talk like that at work, but, I&#39;m sure it&#39;s nothing to be suspicious about – that&#39;s just who she is.”
+
+&amp;emsp;&amp;emsp;“And Wade?” 
+
+&amp;emsp;&amp;emsp;“Oh goodness, Wade doesn&#39;t have a rebellious bone in his body, and he&#39;s been here eleven years. It&#39;s just not in his character.” 
+
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;Ask about...&lt;/h2&gt;
+[[Working at QuinnCoin.-&gt;10.1 Ren: Question One]]
+[[The hacker.-&gt;10.3 Ren: Question Three]]
+
+[[Done with Ren, Continue with Sydney →-&gt;12: Interviewing Sydney]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="10.3 Ren: Question Three" tags="" position="750,1450" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;10: Interviewing Ren&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;“What type of person do you think the hacker is?” you ask.
+
+&amp;emsp;&amp;emsp;“Hmm.. well, whoever they are, I think they’ve got a very strong ideas of morals, willing to take huge risks to achieve them. A chaotic good. They’ve seen what’s wrong with the world, and took action into their own hands to fix it.”
+
+
+
+
+
+
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;Ask about...&lt;/h2&gt;
+[[Wade and Sydney.-&gt;10.1 Ren: Question One]]
+[[The hacker.-&gt;10.2 Ren: Question Two]]
+
+[[Done with Ren, Continue with Sydney →-&gt;12: Interviewing Sydney]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="12.1 Sydney: Question One" tags="" position="250,1700" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;12: Interviewing Sydney&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;“How long have you been with QuinnCoin?” you ask. 
+
+&amp;emsp;&amp;emsp;“Three years. Admin work is boring, definitely not what I went to school for, but, whatever... gotta pay the bills,” she says with a shrug. 
+
+&amp;emsp;&amp;emsp;“You seem to have a lot of animosity for QuinnCoin and its clients... why do you continue to work for a company you don&#39;t agree with?”
+
+&amp;emsp;&amp;emsp;“A woman&#39;s gotta eat, okay? QuinnCoin&#39;s pay is higher than nursing, even as Reagan&#39;s admin assistant. So I bring in the bacon during the day, and volunteer at the hospital in the evenings.”
+
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;Ask about...&lt;/h2&gt;
+[[Wade and Ren.-&gt;12.2 Sydney: Question Two]]
+[[The hacker.-&gt;12.3 Sydney: Question Three]]
+
+[[Done with Sydney, continue the story →-&gt;13: Back Home]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="12.2 Sydney: Question Two" tags="" position="375,1700" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;12: Interviewing Sydney&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;“What about Wade and Ren? Wade seemed to get pretty nervous around me, earlier…” you suggest.
+
+&amp;emsp;&amp;emsp;“Meh, Wade is just nervous to mess this up,” she says. “He’s a big nerd and worships Reagan, I think handing him this huge responsibility made him anxious. I wouldn’t read too much into it.”
+
+&amp;emsp;&amp;emsp;“And Ren?” you went on.
+
+&amp;emsp;&amp;emsp;“Nah, Ren&#39;s happy and comfortable here... as much as she&#39;s my friend, she&#39;s also is a Reagan buttkisser. She loves that guy, she couldn&#39;t risk getting on his bad side.”
+
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;Ask about...&lt;/h2&gt;
+[[Working at QuinnCoin.-&gt;12.1 Sydney: Question One]]
+[[The hacker.-&gt;12.3 Sydney: Question Three]]
+
+[[Done with Sydney, continue the story →-&gt;13: Back Home]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="32" name="12.3 Sydney: Question Three" tags="" position="500,1700" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;12: Interviewing Sydney&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;“So who what type of person do you think could have done this?” you ask. She pauses for a moment to think. 
+
+&amp;emsp;&amp;emsp;“I think… it might be someone you least expect. There’s a big misconception about hackers, like they’re big socially awkward nerds or something. And sure, I guess they could be… but the best hackers are good with people, they can easily manipulate others. The most effective way of hacking hasn’t changed since the 1970s – it&#39;s all about social engineering.”
+
+&amp;emsp;&amp;emsp;“Can you elaborate?”
+
+&amp;emsp;&amp;emsp;“Essentially, the hacker manipulates them to freely give up the information that would make the malicious activity very easy to accomplish. Someone opening an email they shouldn’t, clicking a link, downloading something without thinking,  it all comes down to humans making a stupid mistake. With the right information – and the right idiot – it really is that simple.”
+
+&amp;emsp;&amp;emsp;“You’ve given this a lot of thought, huh...”
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;Ask about...&lt;/h2&gt;
+[[Working at QuinnCoin.-&gt;12.1 Sydney: Question One]]
+[[Wade and Ren.-&gt;12.2 Sydney: Question Two]]
+
+[[Done with Sydney, continue the story →-&gt;13: Back Home]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="33" name="12: What to do" tags="" position="745,3446.6666666666665" size="100,100">So now you have a few options:
+
+Mention: 
+Max Reagan is still not available for comment.
+
+Sydney mentioned email phishing. You ask for access to email activity.
+
+Wade mentioned Sydney volunteers. You ask him to do some digging on where she volunteers, and a list of the known places the Robin has donated. Maybe there&#39;s a connection there.
+
+
+</tw-passagedata><tw-passagedata pid="34" name="13: Back Home" tags="" position="500,1825" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;13: Back Home&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;You thank Sydney for her time, despite how painful it might have been for her to have a conversation with you. You grab an uber back home, and rush upstairs as quickly as you can. You immediately open your laptop, check through your bookmarks and history to dive into the article, but... you can’t seem to find it. You instead receive a 404 Error Page: //“The page you are looking for does not exist.”//
+
+&amp;emsp;&amp;emsp;“NO!!” you cry out, repeatedly clicking and refreshing the page, as if that would magically fix the problem. You search for the article&#39;s headline, ‘Quinn Reagan’, ‘Max Reagan’, ‘hospitalized’, //anything// related to what might be in the contents of that article you weren’t able to access… you come up short. The Robin must have realized you were close, and wiped it from existence. That might have been the closest thing you had to an answer thus far. 
+
+
+&amp;emsp;&amp;emsp;Your wristwatch rumbles; a sensation you&#39;ve come to absolutely despise.
+&lt;div class=&quot;hacker-message&quot;&gt;
+&amp;emsp;&amp;emsp;“Oh, $name. I&#39;m steps ahead.
+&amp;emsp;&amp;emsp;Any man who travels with three servants
+&amp;emsp;&amp;emsp;and says he has no money,
+&amp;emsp;&amp;emsp;is either a fool or a liar.
+&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;Almost immediately after, you receive a second text message:
+
+&lt;div class=&quot;hacker-message&quot; style=&quot;color: #fff;&quot;&gt;
+&amp;emsp;&amp;emsp;Detective $name. It’s Mitchell. I have more to say.
+&lt;/div&gt;
+
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;What do you do?&lt;/h2&gt;
+
+
+[[You ask Wade for a list of known places the Robin Hood hacker has donated.-&gt;13.1 Donation Recipients]]
+[[You need to know about that article – you ask Ren for information on Max’s daughter.-&gt;13.2 Discovering Quinn Reagan]]
+[[Reach out to Mitchell.-&gt;13.3 Contacting Mitchell]]
+[[You accuse Max Reagan.-&gt;13.5 J&#39;ACCUSE!]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="Sydney - Backup - 8:40pm" tags="" position="1725,3125" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;10: Interviewing Sydney&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;Sydney reluctantly agrees to meet you this evening. Across from QuinnCoinn, there is a very trendy, ‘hipster’ restaurant and brewery called Prope. You’re the first to arrive, so you order yourself a $drank and wait at the bar. 20 minutes go by, and you hear the increasingly familiar PING on your watch – another message... potentially from the Robin.
+
+&lt;div class=&quot;hacker-message&quot;&gt;
+&amp;emsp;&amp;emsp;“Hello again, $name.
+&amp;emsp;&amp;emsp;I&#39;m No Outlaw.
+&amp;emsp;&amp;emsp;Why, Someday I&#39;ll Be Called A Great Hero.
+&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;“Detective $name – My favourite person!” she says sarcastically.
+
+&amp;emsp;&amp;emsp;“Sydney, likewise! Thanks for meeting me. Take a seat, order a drink, and let&#39;s get started.” 
+
+&amp;emsp;&amp;emsp;“Let&#39;s get this over with, shall we?” she turns to the bartender and orders a $drank. “Guess we&#39;re not so different after all, huh?” her drink arrives, and you give her a quick cheers. 
+
+&amp;emsp;&amp;emsp;“So Sydney, you must understand why you’re on my list of suspects, yes?” You start off slightly confrontational, knowing this got a rise out of her before.
+
+&amp;emsp;&amp;emsp;“Uh huh. I know. Because I think he&#39;s doing a great thing?” she says. “That doesn’t mean I’m guilty, but you’re welcome to keep digging.”
+
+&amp;emsp;&amp;emsp;“C&#39;mon, Syd. You have to admit it&#39;s a //little// odd how you blatantly agree with the hacker, even though you work for the company that is being attacked?”
+
+&amp;emsp;&amp;emsp;“Firstly, never call me that, we&#39;re not friends. Secondly, if I were the hacker, don&#39;t you think it would be //very// stupid of me to be so open about my stance on it? Look, Detective, I&#39;m sure what to tell you. Do I agree with what he&#39;s doing? Yes, absolutely, I do. Would I have any way of knowing how to do this? No.” She takes a big long gulp and downs half her drink. “Next question.”
+</tw-passagedata><tw-passagedata pid="36" name="13.1 Donation Recipients" tags="" position="300,1950" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;13.1 Donation Recipients&lt;/div&gt;
+
+You send an instant message to Wade, despite it being nearly midnight.
+
+&lt;div class=&quot;message&quot;&gt;
+&lt;span style=&quot;color: #7aa5cc;&quot;&gt;&#39;&#39;$name:&#39;&#39;&lt;/span&gt; Evening Wade, apologies for the late message, but I need to ask you for a quick favour…
+&lt;/div&gt;
+
+He replies almost instantly. 
+
+&lt;div class=&quot;message&quot;&gt;
+&lt;span style=&quot;color: #a17acc;&quot;&gt;&#39;&#39;Wade:&#39;&#39;&lt;/span&gt; Of course, Detective. Whatever you need.
+&lt;span style=&quot;color: #7aa5cc;&quot;&gt;&#39;&#39;$name:&#39;&#39;&lt;/span&gt; I’ll need to to gather all the known charities, hospitals, shelters, non-profits, anywhere you can confirm that the Robin Hood hacker has donated.
+&lt;span style=&quot;color: #a17acc&quot;&gt;&#39;&#39;Wade:&#39;&#39;&lt;/span&gt; Absolutely.
+&lt;span style=&quot;color: #7aa5cc;&quot;&gt;&#39;&#39;$name:&#39;&#39;&lt;/span&gt; And one more thing – I need you to figure out the name of the hospital where Sydney volunteers.
+&lt;span style=&quot;color: #a17acc&quot;&gt;&#39;&#39;Wade:&#39;&#39;&lt;/span&gt; Oh... no problem, Detective $name.
+&lt;span style=&quot;color: #7aa5cc;&quot;&gt;&#39;&#39;$name:&#39;&#39;&lt;/span&gt; I need to see if there’s a match.
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+Wade responds quite promptly with a list.
+
+&lt;div class=&quot;message&quot;&gt;
+&lt;span style=&quot;color: #a17acc;&quot;&gt;&#39;&#39;Wade:&#39;&#39;&lt;/span&gt; Please see attached, detective.
+&lt;/div&gt;
+
+
+Peace Forest Clinic
+White Blossom Hospital Centre
+Grand Willow Community Hospital
+Allworthy Women&#39;s Shelter
+Olympus Medical Centre
+Evergreen General Hospital
+Under the Influence Youth Group
+Great Plains Clinic
+Grand Clavis Medical Centre
+Living Out Loud Youth Shelter
+White Mountain Medical Clinic
+Greenlawn Medical Centre
+Progress Medical Clinic
+Peace Forest General Hospital
+Primary Medical Centre
+Peace Forest General Hospital
+
+&lt;div class=&quot;message&quot;&gt;
+&lt;span style=&quot;color: #a17acc;&quot;&gt;&#39;&#39;Wade:&#39;&#39;&lt;/span&gt; Can confirm, Sydney volunteers at the Grand Clavis Medical Centre. She&#39;s been volunteering there for two years.
+&lt;/div&gt;
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;Now what?&lt;/h2&gt;
+
+
+[[You need to know about that article – you ask Ren for information on Max’s daughter.-&gt;13.2 Discovering Quinn Reagan]]
+[[Reach out to Mitchell.-&gt;13.3 Contacting Mitchell]]
+[[You accuse Sydney.-&gt;13.5 J&#39;ACCUSE!]]
+
+[[Move on with the story  →-&gt;14: Your Notes]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="13.2 Discovering Quinn Reagan" tags="" position="425,1950" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;13.2 Discovering Quinn Reagan&lt;/div&gt;
+
+After discovering the article and having it mysteriously be wiped from the internet mere hours later, you know in your gut that Quinn is a piece of this puzzle. You send an instant message to Ren to ask, hoping she&#39;ll respond right away and give you some answers.
+
+&lt;div class=&quot;message&quot;&gt;
+&lt;span style=&quot;color: #7aa5cc;&quot;&gt;&#39;&#39;$name:&#39;&#39;&lt;/span&gt; Evening Ren, apologies for the late message, but I need to ask you another question...
+&lt;span style=&quot;color: #ad0c00;&quot;&gt;&#39;&#39;Ren:&#39;&#39;&lt;/span&gt; Of course, Detective! What can I do to help?
+&lt;span style=&quot;color: #7aa5cc;&quot;&gt;&#39;&#39;$name:&#39;&#39;&lt;/span&gt; I need to know about Quinn Reagan.
+&lt;span style=&quot;color: #ad0c00;&quot;&gt;&#39;&#39;Ren:&#39;&#39;&lt;/span&gt; Oh, yes, sure, I can help. Quinn is Mr. Reagan&#39;s daughter, she&#39;s six years old.
+&lt;span style=&quot;color: #7aa5cc;&quot;&gt;&#39;&#39;$name:&#39;&#39;&lt;/span&gt; Was she ever sick? In a hospital?
+&lt;span style=&quot;color: #ad0c00;&quot;&gt;&#39;&#39;Ren:&#39;&#39;&lt;/span&gt; Yes. Just over three years ago, I think. Ashlyn Reagan, his (now ex) wife, and Quinn were in a horrible car accident. Ashlyn recovered quite quickly, but Quinn was so young, and in the hospital for quite some time...
+&lt;span style=&quot;color: #ad0c00;&quot;&gt;&#39;&#39;Ren:&#39;&#39;&lt;/span&gt; They weren&#39;t sure if she was going to make it.
+&lt;span style=&quot;color: #7aa5cc;&quot;&gt;&#39;&#39;$name:&#39;&#39;&lt;/span&gt; That&#39;s awful... is Mr Reagan hiding it? Removing any articles online, maybe?
+&lt;span style=&quot;color: #ad0c00;&quot;&gt;&#39;&#39;Ren:&#39;&#39;&lt;/span&gt; I&#39;m not sure, I suppose he could be... he really doesn&#39;t like to talk about it. Quinn is fine now, but it was the darkest point in his life, for sure.
+&lt;span style=&quot;color: #7aa5cc;&quot;&gt;&#39;&#39;$name:&#39;&#39;&lt;/span&gt; Compltely understandable. I&#39;m happy she&#39;s recovered... but, this might be a missing piece.
+&lt;span style=&quot;color: #7aa5cc;&quot;&gt;&#39;&#39;$name:&#39;&#39;&lt;/span&gt; What hospital was it?
+&lt;/div&gt;
+
+Ren lingers on her response, but you can feel the excitement in the pit of your stomach. You&#39;re so close, you can feel it. If this hospital matches one of the ones on the list of places the hacker has donated, Max will have some explaining to do.
+
+&lt;div class=&quot;message&quot;&gt;
+&lt;span style=&quot;color: #ad0c00;&quot;&gt;&#39;&#39;Ren:&#39;&#39;&lt;/span&gt; Grand Clavis Medical Centre.
+&lt;/div&gt;
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;Now what?&lt;/h2&gt;
+
+[[You ask Wade for a list of known places the Robin Hood hacker has donated.-&gt;13.1 Donation Recipients]]
+[[Reach out to Mitchell.-&gt;13.3 Contacting Mitchell]]
+[[You accuse Max Reagan.-&gt;13.5 J&#39;ACCUSE!]]
+
+[[Move on with the story  →-&gt;14: Your Notes]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="38" name="13.5 J&#39;ACCUSE!" tags="" position="675,1950" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;13.4: J&#39;ACCUSE!&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;Hold up! You&#39;re SO close, but we&#39;re not quite ready to accuse yet. It was a great guess, but we just need one more important piece of information: //how //they did it. 
+
+
+//Would you like a hint?//
+* Max knows all.
+* Mitchell is a good friend to have.
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;Keep going:&lt;/h2&gt;
+
+[[You ask Wade for a list of known places the Robin Hood hacker has donated.-&gt;13.1 Donation Recipients]]
+[[You need to know about that article – you ask Ren for information on Max’s daughter.-&gt;13.2 Discovering Quinn Reagan]]
+[[Reach out to Mitchell.-&gt;13.3 Contacting Mitchell]]
+
+[[Move on with the story  →-&gt;14: Your Notes]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="39" name="14: Your Notes" tags="" position="481.6666666666667,2078.333333333333" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;14: Your Notes&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;You gather your thoughts by jotting everything down in your notebook:
+
+&lt;div class=&quot;handwriting&quot; style=&quot;padding-left: 100px; width: 70%;&quot;&gt;
+Ren&#39;s email activity was peculiar
+Sydney volunteers at one of the hospitals the hacker donated: Grand Clavis Medical Centre
+Max Reagan&#39;s daugther was treated for serious injuries at the same hospital, as a long-term patient
+SypherCheck cybersecurity assessments were incomplete, Max fired them
+&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;First, you need to ask Ren to meet up to explain her 90-day gap in emails. During your meetings with her, this should have been something that came up. What is there to hide?
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;Continue:&lt;/h2&gt;
+
+[[Confront Ren →-&gt;14.1 Confront Ren]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="13.3 Contacting Mitchell" tags="" position="548.3333333333334,1950" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;13.3 Contacting Mitchell&lt;/div&gt;
+
+You text Mitchell back as soon as you can:
+&lt;div class=&quot;hacker-message&quot; style=&quot;color: #fff;&quot;&gt;
+&amp;emsp;&amp;emsp;Mitchell, of course, Call me any time.
+&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;He calls immediately, and you hear his voice is a bit shaky over the phone:
+
+&amp;emsp;&amp;emsp;“Look, I could get in a lot of trouble for this... Randall would be furious if I brought up the fact that this was overlooked.”
+
+&amp;emsp;&amp;emsp;“Don’t worry,” you respond. “This will be considered an anonymous tip. I’ll figure out a way to protect you.”
+
+&amp;emsp;&amp;emsp;“Well, I don’t think we were thorough enough... I think you’re right, it’s coming from the inside. Whether it’s the QuinnCoin suspects you have listed, I’m really not sure, but I think your suspicion is correct – I think it’s definitely an employee. We didn’t check get to do a complete check through their emails and personal documents, we didn&#39;t know their background stories – Max Reagan fired us before we could complete it.”
+
+&amp;emsp;&amp;emsp;“Mitchell, if I get you access to those files... could you check through them?”
+
+&amp;emsp;&amp;emsp;“Definitely.”
+
+
+
+&lt;hr&gt;
+
+&amp;emsp;&amp;emsp;You message Wade and ask for access to QuinnCoin employee emails and hard drives. Wade arranges for you and Mitchell to come into QuinnCoin the following morning. To keep the files secure, Mitchell copies the data onto a hard drive to study at home. 
+
+&amp;emsp;&amp;emsp;“I&#39;ll have a summary of what I find ready for you tonight,” says Mitchell, suddenly with a startling new confidence. 
+
+
+
+&lt;hr&gt;
+
+&amp;emsp;&amp;emsp;Later that night, Mitchell reaches out to you via instant message.
+
+&lt;div class=&quot;message&quot;&gt;
+&lt;span style=&quot;color: #a17acc;&quot;&gt;&#39;&#39;Mitchell:&#39;&#39;&lt;/span&gt; Hi Detective $name. I&#39;m still digging through, but here&#39;s what I&#39;ve found so far.
+
+&lt;span style=&quot;color: #a17acc;&quot;&gt;&#39;&#39;Mitchell:&#39;&#39;&lt;/span&gt; Wade had absolutely nothing out of the ordinary. He didn’t even check out Reddit or YouTube on QuinnCoin’s network, everything was 100% work related, absolutely no suspicious activity.
+
+&lt;span style=&quot;color: #a17acc;&quot;&gt;&#39;&#39;Mitchell:&#39;&#39;&lt;/span&gt; Sydney, an alarming amount of QuinnCoin/corporate bashing. Continuous LinkedIn job recommendations. But not really anything to indicate malicious action was taken.
+
+&lt;span style=&quot;color: #a17acc;&quot;&gt;&#39;&#39;Mitchell:&#39;&#39;&lt;/span&gt; As for Ren, about 7 months ago, there was a 90-day gap in her emails with no “out of office” message set, no explanation. Odd, for sure. Other than that, mostly business as usual. She’d occasionally send her travel photos to her personal email. 
+
+&lt;span style=&quot;color: #7aa5cc;&quot;&gt;&#39;&#39;$name:&#39;&#39;&lt;/span&gt; Hmm... that might be a little suspicious. I&#39;ll look into that gap. Thank you, Mitchell. 
+
+&lt;span style=&quot;color: #a17acc;&quot;&gt;&#39;&#39;Mitchell:&#39;&#39;&lt;/span&gt; No problem, detective - I&#39;ll keep searching.
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;Now what?&lt;/h2&gt;
+
+[[You ask Wade for a list of known places the Robin Hood hacker has donated.-&gt;13.1 Donation Recipients]]
+[[You need to know about that article – you ask Ren for information on Max’s daughter.-&gt;13.2 Discovering Quinn Reagan]]
+[[You accuse Max Reagan.-&gt;13.5 J&#39;ACCUSE!]]
+
+[[Move on with the story  →-&gt;14: Your Notes]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="14.2 Call the Hospital" tags="" position="533.3333333333334,2199.9999999999995" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;14.2: Call the Hospital&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;After asking Ren about her mysterious 3-month leave, you decide you need to call Grand Clavis next and get to the bottom of Sydney&#39;s questionable connections to this hospital. You look up the phone number to the Grand Clavis Medical Centre and call them up – hopefully someone there has some answers for you.
+
+&amp;emsp;&amp;emsp;“Grand Clavis Medical Centre, this is Rob speaking, how may I help you?”
+
+&amp;emsp;&amp;emsp;“Hi, I&#39;m Detective $name, I&#39;m working on a case, and I&#39;d like to ask you a few questions about a QuinnCoin employee who volunteers for you,”
+
+&amp;emsp;&amp;emsp;“Yeah absolutely. Which one?” this catches you a bit off guard, and you find yourself stumbling on your words.
+
+&amp;emsp;&amp;emsp;“Um. What. I’m sorry?”
+
+&amp;emsp;&amp;emsp;“Which one? We have two QuinnCoin employees who volunteer here… Sydney Nyoka, and Ren Calce.”
+
+&amp;emsp;&amp;emsp;“I&#39;ll... have to call you back.” You look to your phone, and see another bright green message:
+
+&lt;div class=&quot;hacker-message&quot;&gt;
+&amp;emsp;&amp;emsp;Rob? I never rob.
+&amp;emsp;&amp;emsp;I just sort of borrow a bit,
+&amp;emsp;&amp;emsp;from those who can afford it.
+&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;Your wristwatch rumbles, and you see Mitchell&#39;s contact information pop up on the tiny screen. You swipe up to his message:
+
+&lt;div class=&quot;hacker-message&quot; style=&quot;color: #fff;&quot;&gt;
+&amp;emsp;&amp;emsp;We need to meet IMMEDIATELY.
+&lt;/div&gt;
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;Continue:&lt;/h2&gt;
+
+[[Meet with Mitchell  →-&gt;14.3 Meet with Mitchell]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="14.1 Confront Ren" tags="" position="401.6666666666667,2198.333333333333" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;14.1: Confront Ren&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;Ren agrees to meet you again at Cafe Cucullo. She&#39;s waiting again with a $coffee for you, but you have no time for games this time.  
+
+&amp;emsp;&amp;emsp;“I think there’s something you weren’t telling me, Ren.” you imply. “Anything about a 3-month gap in your email communications?” This is the first time Ren has avoided your gaze. 
+
+&amp;emsp;&amp;emsp;“I... I was on a bereavement leave.” Her shoulders slumped, she speaks in a heavy tone, a complete change in disposition. “Mr. Reagan was very kind, and let me take 3 months,”
+
+&amp;emsp;&amp;emsp;“Oh… wow, I’m so sorry, I didn’t know,” you feel absolutely awful. 
+
+&amp;emsp;&amp;emsp;“Yeah, I mean, try to put on a happy face at work, but, my younger brother, Colton… he was really sick, struggling, for a very long time. For //years//. There was nothing I could do to help him,” she pauses. “About seven months ago now, he lost his battle, and I took three months off.” 
+
+&amp;emsp;&amp;emsp;“Wow, I’m so sorry. I don’t know what to say.”
+
+&amp;emsp;&amp;emsp;“It’s okay, you didn’t know - I don’t usually tell people. The only two people who know are Sydney, and Max.”
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;Next Step:&lt;/h2&gt;
+
+[[Call the Grand Clavis Medical Centre.  →-&gt;14.2 Call the Hospital]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="14.3 Meet with Mitchell" tags="" position="671.6666666666666,2198.333333333333" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;14.3 Meet with Mitchell&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;Mitchell asks you to to meet at the Amica Cafe. You hail a cab and the driver immediately to drive fast and get you there as soon as possible. You arrive in record time, and Mitchell is sitting at a booth, his face pale with excitement, smile wide. 
+
+&amp;emsp;&amp;emsp;“Detective... have you heard of Steganography?”
+
+&amp;emsp;&amp;emsp;“No, what&#39;s that?”
+
+&amp;emsp;&amp;emsp;“A technique of hiding data within an ordinary object or file. One could bury the information //within// a file to bypass detection, then retrieve that information at a later date.”
+
+&amp;emsp;&amp;emsp;“I&#39;m... not following...”
+
+&amp;emsp;&amp;emsp;“Well, in our case, this means hiding classified account data inside seemingly innocent image files...”
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;I know who it is! I suspect...&lt;/h2&gt;
+
+[[Accuse Max →-&gt;15.1 Accuse Max]]
+[[Accuse Wade →-&gt;15.2 Accuse Wade]]
+[[Accuse Sydney →-&gt;15.3 Accuse Sydney]]
+[[Accuse Ren →-&gt;15: Accuse Ren]]
+[[Accuse Randall →-&gt;15.4 Accuse Randall]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="15.1 Accuse Max" tags="" position="555,2348.333333333333" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;15.1 Accuse Max&lt;/div&gt;
+
+Max is definitely a very mysterious, secretive man; guilty of a lot of things, but &#39;&#39;he is &lt;u&gt;not&lt;/u&gt; Robin Hood hacker.&#39;&#39;
+
+He feels conflicted about the hacker&#39;s motives after almost losing his young daughter, Quinn, in a serious car accident. He&#39;s spent enough time in the Grand Clavis Hospital to empathize with the hacker&#39;s intentions, and maybe even enables them to continue, as you&#39;ve seen with him firing SypherCheck as they were getting close to catching them. 
+
+
+[[Go back →-&gt;14.3 Meet with Mitchell]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="15.2 Accuse Wade" tags="" position="681.6666666666666,2349.9999999999995" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;15.2 Accuse Wade&lt;/div&gt;
+
+No, Wade &#39;&#39;&lt;u&gt;not&lt;/u&gt; Robin Hood hacker.&#39;&#39;
+
+Wade has no motive, and no connection to any of the places the Robin has donated. Let&#39;s try again!
+
+
+[[Go back →-&gt;14.3 Meet with Mitchell]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="15.3 Accuse Sydney" tags="" position="805,2346.666666666666" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;15.3 Accuse Sydney&lt;/div&gt;
+
+Sydney might fit the profile of a smart, risk-taking, cocky hacker. Not only does she love to prove that she’s the smartest person in the room, but she also completely agrees with the Robin Hood Hacker’s motive to infiltrate the accounts.
+
+But no – she’s  &#39;&#39;&lt;u&gt;not&lt;/u&gt; Robin Hood hacker.&#39;&#39;. Sydney can’t help but speak her mind. She’s knowledgeable, she&#39;s abrasive, but she’s not a con woman. You’re looking for someone who might be a bit better at manipulating people… 
+
+
+
+[[Go back →-&gt;14.3 Meet with Mitchell]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="15: Accuse Ren" tags="" position="429.99999999999994,2350" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;15: Accuse Ren&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;“Wait... //Ren?// ... Of course! With the images she was sending herself through email.”
+
+&amp;emsp;&amp;emsp;“Yes, Detective $name.” he said. “Hidden in her travel photos she emailed to a personal account. Definitely a //little// odd that it was always coming from her work account, but seemed innocent enough that nobody would really think to look into it. Until I realized, there were twelve of them – one for each account that was breached. Here... let me show you an example.”
+
+
+
+&lt;center&gt;&lt;img src=&quot;https://i.ibb.co/R45L91q/sunset.png&quot; alt=&quot;sunset&quot; border=&quot;0&quot;&gt;&lt;/center&gt;
+
+
+&amp;emsp;&amp;emsp;“That&#39;s... just a picture of a sunset, Mitchell. What am I looking at, here?” you respond.
+
+&amp;emsp;&amp;emsp;“Uh huh. Exactly. This sunset contains the account information of one of the accounts that was compromised. I noticed she had duplicates of a lot of the travel photos in her files, which I thought was curious. So I compared each file, and noticed something //very// strange. Even though the files, visibly, looked exactly the same... the //file size// of the ones she emailed to herself were larger, just by 30-50 bytes in most cases.”
+
+&amp;emsp;&amp;emsp;“So.. she was adding information to the files before she sent them.”
+
+&amp;emsp;&amp;emsp;“Exactly. One line in a text file is equal to about 30-50 bytes. So this sunset image that you see now? Open it as an image, you&#39;ll see a regular sunset. But if you open it in a text editor, you&#39;ll see it as code. Scroll to the very bottom – and here&#39;s what you get...”
+
+
+&lt;center&gt;&lt;img src=&quot;https://i.ibb.co/VT1hMXh/sunset-reveal.jpg&quot; alt=&quot;sunset-reveal&quot; border=&quot;0&quot;&gt;&lt;/center&gt;
+
+Sure enough, at the very bottom of the code was the account information and password of one of the affected accounts:
+
+//Name: Alan McCoy, Account Number: 449382749, Password: Baymax1978!//
+
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;Conclusion:&lt;/h2&gt;
+
+[[How it&#39;s time to tell Max what you saw →-&gt;16: Tell Max]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="48" name="15.4 Accuse Randall" tags="" position="940,2346.6666666666665" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;15.4 Accuse Randall&lt;/div&gt;
+
+Randall wasn&#39;t really involved - &#39;&#39;he is &lt;u&gt;not&lt;/u&gt; Robin Hood hacker.&#39;&#39;
+
+He&#39;s only hiding the faulty job they did because he didn&#39;t want SypherCheck to be known as inadequate. Let&#39;s try again! 
+
+
+[[Go back →-&gt;14.3 Meet with Mitchell]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="17.1: The End" tags="" position="350.8333333333334,2625" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;17.1 The End&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;“Well, that&#39;s a shame, Detective $name.” he says, and gives his watch two taps. “I truly wish we saw eye to eye on this matter. I&#39;m so sorry it had to be this way...” Your watch rumbles and you quickly glance down to see a text from Mitchell.
+
+&lt;div class=&quot;hacker-message&quot; style=&quot;color: #fff;&quot;&gt;
+$name, they found me!! HELP!!
+&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;But before you can look up from your watch to ask Reagan what he&#39;s done, the room goes pitch black. The rough texture of a canvas bag covers your entire head, and you feel a set of strong hands pulling at the drawstring, clenching it tighter and tighter around your throat.
+
+&amp;emsp;&amp;emsp;The pinch of a sharp needle stings your neck, and you feel all your senses numb, your muscles relax, as your body slowly hits the floor. 
+
+
+&lt;hr&gt;
+
+You&#39;ve successfully completed the story and found the hacker! Too bad you died, huh. ☹
+
+Either way, thanks so much for reading and sticking through to the end, I hope you had fun. If you want to read through some background info on the story and all the juicy clues I left for you, click through to the next passage. 
+
+&lt;div class=&quot;answers&quot;&gt;
+[[THE END  →-&gt;17.2: The End]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="50" name="16: Tell Max" tags="" position="429.99999999999994,2500" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;16: Tell Max&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;Now, you have to tell Max Reagan that one of his favourite employees is the one unmistakably gaining access to these accounts and stealing from his clients, right under his nose. You push through the rotating door of the QuinnCoin building, and you&#39;re met with the front desk female android, reminiscent of your first day on the job.
+
+&amp;emsp;&amp;emsp;“Welcome to QuinnCoin!” she exclaims. “Please listen to the following options before proceeding –”
+
+&amp;emsp;&amp;emsp;“I need to speak with Mr. Reagan IMMEDIATELY. I don&#39;t care if he&#39;s in a meeting with //the Queen//, he&#39;s going to want to hear what I have to say today,” you say. The android freezes for a moment, registering your voice.
+
+&amp;emsp;&amp;emsp;“Detective $name. Thank you for visiting QuinnCoin! Max Reagan currently in a meeting and is unable to see you today. To leave a message, please say, –”
+
+&amp;emsp;&amp;emsp;“NO. Tell Max Reagan... I&#39;ve found the Robin Hood hacker.”
+
+She pauses, with that creepy, blank android stare. Suddenly, a booming male voice comes through the speakerphone on her desk.
+
+&amp;emsp;&amp;emsp;“Detective $name. Please make your way up. I&#39;m looking forward to finally meeting you.”
+
+&amp;emsp;&amp;emsp;Your watch beeps, and the door slides open.
+
+
+&lt;hr&gt;
+
+&amp;emsp;&amp;emsp;Outside of Reagan&#39;s office, you recieve one last message from Ren:
+
+&lt;div class=&quot;hacker-message&quot;&gt;
+&amp;emsp;&amp;emsp;I&#39;ve seen knights in armor panic at the first hint of battle.
+&amp;emsp;&amp;emsp;And I&#39;ve seen the lowliest, unarmed squire
+&amp;emsp;&amp;emsp;pull a spear from his own body, to defend a dying horse.
+&amp;emsp;&amp;emsp;Nobility is not a birthright. It&#39;s defined by one&#39;s actions.
+&amp;emsp;&amp;emsp;So, $name, what&#39;s yours?
+&lt;/div&gt;
+
+&amp;emsp;&amp;emsp;You push the door open to Max Reagan&#39;s extravagant office. Every detail boasts luxury and extravagance. On a normal occasion, you would want to have a closer look around, but you have elevated emotions about //finally// meeting the man that hired you and stay laser-focused.
+
+&amp;emsp;&amp;emsp;“Mr. Reagan, Mitchell Cohen and I discovered who is infiltrating the accounts. We&#39;ve found the Robin Hood hacker,” you say fiercely. 
+
+&amp;emsp;&amp;emsp;“Lovely. And what did you find?,” He seems unbothered, walks over to his marble bar top and pours two glasses of scotch. You try not to let his nonchalance distract you.
+
+&amp;emsp;&amp;emsp;“Ren Calce is the Robin Hood hacker. It seems that, after the death of her brother, she came back from her leave of absence and started to hide account information in image files,” 
+
+&amp;emsp;&amp;emsp;“Ah yes, good, that makes sense, doesn&#39;t it?” his indifferent response is definitely throwing you for a loop.
+
+&amp;emsp;&amp;emsp;“You... don&#39;t... seem surprised,” you realize slowly. He chuckles, and hands you one of the glasses.
+
+&amp;emsp;&amp;emsp;“No, Detective $name, I&#39;m not. I knew.”
+
+&amp;emsp;&amp;emsp;“So.. why even hire me?”
+
+&amp;emsp;&amp;emsp;“To save face, Detective,” he said. “I can’t have my clients thinking we’re doing //nothing// about it, now can I? But, yes, Ren couldn&#39;t afford her brother&#39;s treatments. After he passed, it was a rude awakening for her – she couldn&#39;t idly sit by and watch millions of dollars just sit in these accounts. She felt it was greedy not to give it to those who //truly// need it. She&#39;s saved a lot of people. I, of course, caught her after her first few attempts. Had a nice long chat about it.” 
+
+&amp;emsp;&amp;emsp;“And, you didn&#39;t do anything about it? What about your clients, your business?” He releases a heavy sigh.
+
+&amp;emsp;&amp;emsp;“Detective $name… do you know what it’s like to lose a child?” You pause for what feels like forever, knowing there is no right answer.
+
+&amp;emsp;&amp;emsp;“No…” you say quietly. 
+
+&amp;emsp;&amp;emsp;“And I am grateful to say that I don’t, either. But I came close enough to know that I will do whatever I can to prevent anyone else from experiencing it. Yes, even if it comes at the expense of my clients,” he clinks his glass to yours, and raises an eyebrow. “Detective, I hope you understand… I think Ren is doing good work here, and I intend to keep her.”
+
+&amp;emsp;&amp;emsp;“Mr. Reagan, I honestly don’t know what you want me to do here. You hired me to catch the Robin Hood hacker, and I did.”
+
+&amp;emsp;&amp;emsp;“Yes, you did – great job! I will of course be honouring our contract, and will ensure your payment will enter your account first thing tomorrow morning. But now… what are you going to do about it?”
+
+
+&lt;div class=&quot;answers&quot;&gt;
+&lt;h2&gt;So... what do you do?&lt;/h2&gt;
+
+[[Stealing is stealing. I’m going to turn you both in.  →-&gt;17.1: The End]]
+[[I agree with the Robin Hood hacker. I&#39;m going to keep your secret  →-&gt;17.2: The End]]
+
+&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="51" name="17.2: The End" tags="" position="474.99999999999994,2624.9999999999995" size="100,100">&lt;img src=&quot;https://i.ibb.co/SyRj9WM/title.jpg&quot; class=&quot;title&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;17.2: The End&lt;/div&gt;
+
+You&#39;ve successfully completed the story and found the hacker! Thanks so much for reading and sticking through to the end, I hope you had fun. If you want to read through some background info on the story and all the juicy clues I left for you, I&#39;ve listed them below.
+
+&lt;hr&gt;
+
+This idea is loosely based on an idea for a graphic novel I had, but I wanted to simplify it into a short(ish) story and tailor it slightly to better fit the crime fiction genre and adhere to the rules of &quot;fair play&quot;. When I was doing research on what makes a “good” crime fiction and where I could possibly start, I read some pretty solid advice – come up with clues to help the audience, then “fake” clues to distract them. I figured in an adventure story, where someone might not see every clue or play through every option, I hid clues //everywhere//. 
+
+So here’s what you might have found to indicate Ren was guilty. Half points if you also suspected Max!
+
+
+* To start the adventure, you need to access “Elevator 17, Floor 5, Room 14.” 17-5-14 is your first hint, this spells out R-E-N.
+* Ren&#39;s last name, &quot;Calce&quot; is after Michael Calce, a Canadian hacker known as &quot;Mafiaboy&quot; who successfully crashed HUGE websites like Yahoo, Amazon, eBay, CNN, and Dell, when he was 15 years old.
+* Throughout the story, the Robin Hood hacker is referred to as “he” by all the characters. Ren is the only person who refers to them as “they”, knowing it’s actually a woman.
+* Ren mentions that she is a morning person - the attacks happen at 6am.
+* The location where you meet all your suspects are latin words that reference either their guilt or association to the hacker. (I of course don&#39;t speak latin, so I&#39;ll have to trust google translate on this one, haha!) I thought it might be an interesting clue if anyone picked up on how I always gave a specific name to each location – the proper nouns everywhere felt a bit out of place. Throughout the story, you...
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Meet Wade at Nondum Cafe: &quot;Nondum&quot; is &quot;Not Yet&quot; in Latin
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Meet Randall &amp; Mitchell at the restaurant called Perversas: &quot;Wrong Way/Keep Going&quot; in Latin
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Meet Sydney at &quot;Prope&quot; Brewery: &quot;Almost/Nearly there&quot; in Latin
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Meet Ren at Cafe Cucullo: &quot;Cucullo&quot; is &quot;Hood&quot; in Latin
+* I did this with the hospital Sydney volunteers at, too. “Grand Clavis Medical Centre”, “Clavis”, means “Key”, so I’m referring to a “big key/big glue” to the story. Once you realize Ren also volunteered at Grand Clavis and was hiding it from you, that was the “big clue” – she was the clear offender who was hiding her ties to the hospital.
+* Ren&#39;s brother passed away seven months ago, she was on a leave of absense for three, has been back to work for four months - the same time the hacker started stealing from the accounts.
+* Ren is also the only other “college dropout” on your suspect list, like Reagan was.
+* On the suspect list, Ren dropped out of her program due to “unpaid fees”, hinting that she might have come from a lower class family than everyone else on the list. She casually mentioned she couldn’t save her brother – she couldn’t afford to. This is her motive for stealing from QuinnCoin clients.
+* Check out the sunset image &lt;a target=_blank href=&quot;https://www.securityondemand.com/insider-uses-steganography-steal-trade-secrets-china/&quot; style=&quot;color: #fff;&quot;&gt;here&lt;/a&gt;! This is where I got the idea that the information would be stored in innocent looking images.
+
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
